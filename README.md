@@ -1,7 +1,7 @@
-# Your-Links ie: Create-Personal-Website-on-IPFS
-Using IPFS public gateway, easily create Linktree link pages via IPFS and eventually upgrade with ENS website- Sorta like Linktree. Link your video, article, recipe, tour, store, website, social post .
+# Your-Links 
 
-- Using ipfs public gateway, easily create linktree link pages(Linktree is the launchpad to your latest video, article, recipe, tour, store, website, social post - everywhere you are online.)
+## Create-Personal-Website-on-IPFS
+- Using IPFS public gateway, easily create Linktree link pages via IPFS and eventually upgrade with ENS website- Sorta like Linktree. Link your video, article, recipe, tour, store, website, social post .
 
 ## What does it take to get it done?
 
