@@ -3,6 +3,9 @@
 ## Create-Personal-Website-on-IPFS
 - Using IPFS public gateway, easily create Linktree link pages via IPFS and eventually upgrade with ENS website- Sorta like Linktree. Link your video, article, recipe, tour, store, website, social post .
 
+Using a CMS that can quickly organize everything into one simple webpage hosted using the IPFS gatewaay
+
+
 ## What does it take to get it done?
 
 ## What coding needs to be done?
