@@ -1,7 +1,7 @@
 # Your-Links 
 
 ## Create-Personal-Website-on-IPFS
-- Using IPFS public gateway, easily create personalized web-pages with user defined hyperlinks, photos, and videos.Link your video, website, article, recipe, social post. Login to the app, add your links and create your own website link using IPFS. Users returned a 
+- Using IPFS public gateway, easily create personalized web-pages with user defined hyperlinks, photos, and videos.Link your video, website, article, recipe, social post. Login to the app, add your links and create your own website link using IPFS. Users returned a CID and link.
 
 If youre using brave, the website will load using IPFS itself. If youre not using brave, then the website loads using the IPFS public gateway. 
 
