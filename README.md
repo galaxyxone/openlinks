@@ -12,7 +12,6 @@ Using a CMS that can quickly organize everything into one simple webpage hosted 
 
 ## What coding needs to be done?
 
-## Who can help you?
 
 ## Program Flow
 
