@@ -3,14 +3,16 @@
 ## Create-Personal-Website-on-IPFS
 - Using IPFS public gateway, easily create personalized web-pages with user defined hyperlinks, photos, article, recipe(text), social post. Login to the app, add your links and create your own website link using IPFS. Users returned a CID and link. login and change the website and user is returned new link.
 
-If youre using brave, the website will load using IPFS itself. If youre not using brave, then the website loads using the IPFS public gateway. 
+If youre using brave, the website will load using IPFS itself. If youre not using Brave, then the website loads using the IPFS public gateway. 
 
 
 - Eventually upgrade with IPNS- website links dont change
 
 - Add videos- display video as well
 
--Ability to edit pages and ipns 
+-Ability to edit pages and IPFS
+
+-Decentralized login
 
 ## Program Flow
 
