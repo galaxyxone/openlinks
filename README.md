@@ -1,7 +1,17 @@
 # Your-Links 
 
 ## Create-Personal-Website-on-IPFS
-- Using IPFS public gateway, easily create Linktree link pages via IPFS and eventually upgrade with ENS website- Sorta like Linktree. Link your video, article, recipe, tour, store, website, social post .
+- Using IPFS public gateway, easily create personalized web-pages with user defined hyperlinks, photos, and videos.Link your video, website, article, recipe, social post. Login to the app, add your links and create your own website link using IPFS. Users returned a 
+
+If youre using brave, the website will load using IPFS itself. If youre not using brave, then the website loads using the IPFS public gateway. 
+
+
+- Eventually upgrade with ENS website-  
+
+
+Does it make sense to use a domain or is it better to use actual CID's hosted on the IFPS gateway? 
+
+
 
 Using a CMS that can quickly organize everything into one simple webpage hosted using the IPFS gateway
 
@@ -16,7 +26,7 @@ Using a CMS that can quickly organize everything into one simple webpage hosted 
 - User creates IPFS website with info they want
   
 - PIN the website
-- Users ipfs website is linked with ENS
+- Users personal website is linked with ENS
 
-This was updated with its own public repo here- https://github.com/noryev/Create-Personal-Website-on-IPFS
+
 
