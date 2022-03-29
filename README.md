@@ -6,7 +6,7 @@
 If youre using brave, the website will load using IPFS itself. If youre not using Brave, then the website loads using the IPFS public gateway. 
 
 
--Eventually upgrade with IPNS- website links dont change
+-Eventually upgrade with IPNS
 
 -Add videos- display video as well
 
