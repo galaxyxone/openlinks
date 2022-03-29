@@ -27,4 +27,4 @@ Using a CMS that can quickly organize everything into one simple webpage hosted 
 
 This was updated with its own public repo here- https://github.com/noryev/Create-Personal-Website-on-IPFS
 
-0-Block 300 
+0-Block 300 back-on-it
