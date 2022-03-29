@@ -12,7 +12,6 @@ Using a CMS that can quickly organize everything into one simple webpage hosted 
 
 ## What coding needs to be done?
 
-## Who can help you?
 
 ## Program Flow
 
@@ -28,3 +27,5 @@ Using a CMS that can quickly organize everything into one simple webpage hosted 
 This was updated with its own public repo here- https://github.com/noryev/Create-Personal-Website-on-IPFS
 
 0-Block 300 back-on-it
+
+solar flair- designer i wear
