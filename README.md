@@ -22,7 +22,7 @@ If youre using brave, the website will load using IPFS itself. If youre not usin
   
 - PIN the website
 
-- Users personal website is linked with ipfs
+- Users personal website is linked with either IPFS CID or IPFS gateway link
 
 
 
