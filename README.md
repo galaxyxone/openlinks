@@ -6,16 +6,11 @@
 If youre using brave, the website will load using IPFS itself. If youre not using brave, then the website loads using the IPFS public gateway. 
 
 
-- Eventually upgrade with ENS website-  
+- Eventually upgrade with IPNS- website links dont change
 
+- Add videos- display video as well
 
-Does it make sense to use a domain or is it better to use actual CID's hosted on the IFPS gateway? 
-
-
-
-Using a CMS that can quickly organize everything into one simple webpage hosted using the IPFS gateway
-
--Ability to edit pages and ipns figuring out what to name it
+-Ability to edit pages and ipns 
 
 ## Program Flow
 
@@ -26,7 +21,8 @@ Using a CMS that can quickly organize everything into one simple webpage hosted 
 - User creates IPFS website with info they want
   
 - PIN the website
-- Users personal website is linked with ENS
+
+- Users personal website is linked with ipfs
 
 
 
