@@ -7,12 +7,6 @@ Using a CMS that can quickly organize everything into one simple webpage hosted 
 
 -Ability to edit pages and ipns figuring out what to name it
 
-
-## What does it take to get it done?
-
-## What coding needs to be done?
-
-
 ## Program Flow
 
 - User Loggs-In 
@@ -26,6 +20,3 @@ Using a CMS that can quickly organize everything into one simple webpage hosted 
 
 This was updated with its own public repo here- https://github.com/noryev/Create-Personal-Website-on-IPFS
 
-0-Block 300 back-on-it
-
-solar flair- designer i wear
