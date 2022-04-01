@@ -27,4 +27,9 @@ If youre using brave, the website will load using IPFS itself. If youre not usin
 - Users personal website is linked with either IPFS CID or IPFS gateway link
 
 
+how to create and export a webpage within a web-app
+
+wise words via stack overflow- I'm not sure how familiar you are with jQuery, but you could either use the .on function to add an event listener to the input field where users will type their query, or there are individual functions that you can use as shortcuts to .on event listeners.
+
+
 
