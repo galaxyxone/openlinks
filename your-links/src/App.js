@@ -7,8 +7,8 @@ import Profile from "./Profile";
 
 class App extends Component {
 render() {
-  return <Route path="/" exact component={Home} />
-  <Route path="/profile" component={Profile} />;
+  return <><Route path="/" exact component={Home} />
+  <Route path="/profile" component={Profile} /></;
   }
 }
 
