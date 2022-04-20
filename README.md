@@ -1,6 +1,6 @@
 # OpenLinks.io
 
-### This repo is a work in progress- FYI nothing works yet
+## This repo is a work in progress- FYI nothing works yet
 
 ### Using IPFS public gateway, easily create personalized web-pages with user defined hyperlinks, photos, article, recipe(text), social post. Login to the app, add your links and create your own website link using IPFS. Users returned a CID and link. login and change the website and user is returned new link.
 
@@ -37,7 +37,7 @@ npm install auth0-js@9.13.4 auth0-lock@11.25.1 express@4.17.1 express-jwt@5.3.1 
 
 
 
-What is the easiest way to create and export a webpage within a React web-app
+- What is the easiest way to create and export a webpage within a React web-app?
 
 wise words via stack overflow- I'm not sure how familiar you are with jQuery, but you could either use the .on function to add an event listener to the input field where users will type their query, or there are individual functions that you can use as shortcuts to .on event listeners.
 
