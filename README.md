@@ -1,4 +1,4 @@
-# yourlinks.io
+# OpenLinks.io
 
 ### This repo is a work in progress- FYI nothing works yet
 
