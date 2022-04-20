@@ -2,9 +2,9 @@
 
 ### This repo is a work in progress- FYI nothing works yet
 
-- Using IPFS public gateway, easily create personalized web-pages with user defined hyperlinks, photos, article, recipe(text), social post. Login to the app, add your links and create your own website link using IPFS. Users returned a CID and link. login and change the website and user is returned new link.
+### Using IPFS public gateway, easily create personalized web-pages with user defined hyperlinks, photos, article, recipe(text), social post. Login to the app, add your links and create your own website link using IPFS. Users returned a CID and link. login and change the website and user is returned new link.
 
-Users using Brave will use native IPFS. Users not on Brave, personal website loads using the IPFS Public Gateway. 
+- Users using Brave will use native IPFS. Users not on Brave, personal website loads using the IPFS Public Gateway. 
 
 ## Installation Instructions
 
