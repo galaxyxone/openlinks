@@ -6,7 +6,8 @@ import Profile from "./Profile";
 class App extends Component {
   render() {
     return (
-    <>
+      // This is equivalent to calling a JSX fragment
+    <> 
     <Route path="/" exact component={Home} />
     <Route path="profile" component={Profile} />
     </>
