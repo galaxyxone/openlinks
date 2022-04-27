@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# This React Code is a Login Base for OpenLinks- A personal website builder on IPFS built by Noryev @ GalaxyX
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
 
 ## Available Scripts
 
