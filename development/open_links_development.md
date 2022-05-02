@@ -4,7 +4,7 @@
 
 ## Development Steps
 
-1. Finish New React Login (Important)
-2. Website Generator (Kinda Done, Add IPFS add functionality ASAP) 
-3. Implement Generator with React Login
-5. 
+1. Finish New React Login (Done)
+2. Website Generator (Generate HTML website via user designated links)
+3. Add website to IPFS for hosting via Gateway(Add ipfs-add HTTP API request)
+4. Return IPFS CID/BAFY to users Auth0 React CMS storage and user retrieval 
