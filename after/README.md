@@ -18,3 +18,5 @@ REACT_APP_AUTH0_CALLBACK_URL=http://localhost:3000/callback
 npm install
 npm start
 ```
+
+Make sure to fix callback URL in Auth0 project
