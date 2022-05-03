@@ -16,11 +16,14 @@
     "react-scripts": "2.0.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "run-p start:client start:server",
+    "start:client": "react-scripts start",
+    "start:server": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:3001",
   "eslintConfig": {
     "extends": "react-app"
   },
