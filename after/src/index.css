@@ -11,7 +11,7 @@ body {
 h1,
 h2,
 h3 {
-  color: #ffffff;
+  color: #f0582a;
 }
 
 button {
@@ -29,7 +29,7 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-image: linear-gradient(to bottom right, #2a6ff0, #9112f8);
+  background-image: linear-gradient(to bottom right, #f0582a, #eb0685);
 }
 
 nav li {
@@ -45,7 +45,7 @@ nav li a {
 }
 
 nav li a:hover {
-  background-color: #989898;
+  background-color: #d9390d;
 }
 
 nav button {
