@@ -26,7 +26,8 @@ class Courses extends Component {
       .then(response => console.log(response))
       .catch(error => this.setState({ message: error.message }));
   }
-
+// Add the scopes and the API access to courses in Pluralsight Course:
+// 999
   render() {
     return (
       <ul>
