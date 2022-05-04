@@ -41,4 +41,7 @@ wise words via stack overflow- I'm not sure how familiar you are with jQuery, bu
 
 https://www.saltycrane.com/blog/2020/05/how-generate-static-html-using-react-typescript-and-nodejs/
 
+
 <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
+
+### Make sure to write some tests at the end of this- Come up with good testing- You need to know where youre going
