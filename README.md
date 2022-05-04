@@ -5,15 +5,12 @@
 ### Using IPFS public gateway, easily create personalized web-pages with user defined hyperlinks, photos, article, recipe(text), social post. Login to the app, add your links and create your own website link using IPFS. Users returned a CID and link. login and change the website and user is returned new link.
 
 
+[![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
+[![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](https://ipfs.io/)
+
 - Users using Brave will use native IPFS. Users not on Brave, personal website loads using the IPFS Public Gateway. 
 
-## Installation Instructions
-
-When building React- Auth0 Login, make sure to Install dependency script:
-
-```sh
-npm install auth0-js@9.13.4 auth0-lock@11.25.1 express@4.17.1 express-jwt@5.3.1 express-jwt-authz@1.0.0 jwks-rsa@1.3.0 npm-run-all@4.1.5 react-router-dom@5.2.0
-```
+## This project is still deep in development mode- come back soon for more updates
 ## Program Flow
 
 - User Loggs-In 
