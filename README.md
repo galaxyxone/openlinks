@@ -13,15 +13,15 @@
 ## This project is still deep in development mode- come back soon for more updates
 ## Program Flow
 
-- User Loggs-In (https://openlinks.io)
+- User Loggs-In (https://openlinks.io) login basically finished
 
 - User uses UI to create a .html page that gets added to either IPFS or Pinata(as advised on IPFS Docs, https://docs.ipfs.io/how-to/websites-on-ipfs/single-page-website/#set-up-a-domain)
 
-- User creates IPFS website with info they want
+- User creates IPFS website with info they want (HTML Generation page working on NOW)
   
-- PIN the website
+- PIN the website (ipfs add)
 
-- Users personal website is linked with either IPFS CID or IPFS gateway link
+- Users personal website is linked with either IPFS CID or IPFS gateway link (return users CID to users system) 
 
 ## Future Features
 
