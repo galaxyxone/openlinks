@@ -42,3 +42,5 @@ npm install auth0-js@9.13.4 auth0-lock@11.25.1 express@4.17.1 express-jwt@5.3.1 
 wise words via stack overflow- I'm not sure how familiar you are with jQuery, but you could either use the .on function to add an event listener to the input field where users will type their query, or there are individual functions that you can use as shortcuts to .on event listeners.
 
 https://www.saltycrane.com/blog/2020/05/how-generate-static-html-using-react-typescript-and-nodejs/
+
+### Make sure to write some tests at the end of this- Come up with good testing
