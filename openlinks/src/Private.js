@@ -5,10 +5,14 @@ class Private extends Component {
     message: ""
   };
 
+//This sends the authorization token as a fetch call- 
+
   componentDidMount() {
     fetch("/private", {
       headers: { Authorization: `Bearer ${this.props.auth.getAccessToken()}` }
     })
+
+
       .then(response => {
         if (response.ok) return response.json();
         throw new Error("Network response was not ok.");
