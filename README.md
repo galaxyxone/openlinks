@@ -43,4 +43,4 @@ wise words via stack overflow- I'm not sure how familiar you are with jQuery, bu
 
 https://www.saltycrane.com/blog/2020/05/how-generate-static-html-using-react-typescript-and-nodejs/
 
-### Make sure to write some tests at the end of this- Come up with good testing
+### Make sure to write some tests at the end of this- Come up with good testing- You need to know where youre going
