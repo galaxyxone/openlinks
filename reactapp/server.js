@@ -34,7 +34,7 @@ app.get("/public", function(req, res) {
 
 app.get("/private", checkJwt, function(req, res) {
   res.json({
-    message: "Hello from a private API!"
+    message: "OpenLink Builder"
   });
 });
 
