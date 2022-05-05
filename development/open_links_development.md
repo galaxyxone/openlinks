@@ -20,3 +20,6 @@
 2. design updates
 3. change the website
 4. other from the front page of this repo
+
+
+ps. Thank Juan its easy to display html pages via IPFS... Its almost as if IPFS was made for this (:D)
