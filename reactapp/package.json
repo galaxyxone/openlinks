@@ -1,7 +1,7 @@
 {
   "name": "react-auth0",
   "version": "0.1.0",
-  "private": true,
+  "builder": true,
   "dependencies": {
     "auth0-js": "^9.8.0",
     "auth0-lock": "^11.10.0",
