@@ -5,9 +5,8 @@ import Profile from "./Profile";
 import Nav from "./Nav";
 import Auth from "./Auth/Auth";
 import Callback from "./Callback";
-import Public from "./Public";
 import Private from "./Private";
-import Courses from "./Courses";
+
 
 
 class App extends Component {
@@ -39,7 +38,6 @@ class App extends Component {
               )
             }
           />
-          <Route path="/public" component={Public} />
           <Route
             path="/private"
             render={props =>
@@ -50,17 +48,7 @@ class App extends Component {
               )
             }
           />
-          <Route
-            path="/courses"
-            render={props =>
-              this.auth.isAuthenticated() &&
-              this.auth.userHasScopes(["read:courses"]) ? (
-                <Courses auth={this.auth} {...props} />
-              ) : (
-                this.auth.login()
-              )
-            }
-          />
+        
         </div>
       </>
     );
