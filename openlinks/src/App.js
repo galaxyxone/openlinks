@@ -8,6 +8,7 @@ import Callback from "./Callback";
 import Public from "./Public";
 import Private from "./Private";
 import Courses from "./Courses";
+import tsconfig from "./tsconfig.json"
 
 class App extends Component {
   constructor(props) {
