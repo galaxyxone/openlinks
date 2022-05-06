@@ -7,7 +7,6 @@ class Builder extends Component {
 
 //This sends the authorization token as a fetch call- 
 
-  
 
   render() {
     return <p>{this.state.message}</p>;
@@ -15,3 +14,4 @@ class Builder extends Component {
 }
 
 export default Builder;
+
