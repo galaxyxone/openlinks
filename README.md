@@ -7,6 +7,7 @@
 
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](https://ipfs.io/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](github.com)
 
 - Users using Brave will use native IPFS. Users not on Brave, personal website loads using the IPFS Public Gateway. 
 
