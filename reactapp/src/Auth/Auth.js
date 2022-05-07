@@ -11,10 +11,10 @@ export default class Auth {
       audience: process.env.REACT_APP_AUTH0_AUDIENCE,
       responseType: "token id_token",
       
-      
     });
   }
 
+  
   login = () => {
     this.auth0.authorize();
   };
@@ -44,6 +44,7 @@ export default class Auth {
     // use the scopes as requested. If no scopes were requested,
     // set it to nothing
    
+    // removed this- didnt need scope perameter
 
     localStorage.setItem("access_token", authResult.accessToken);
     localStorage.setItem("id_token", authResult.idToken);
@@ -65,6 +66,9 @@ export default class Auth {
       returnTo: "http://localhost:3000"
     });
   };
+
+  //This is what you change when you take the app into production
+
 
   getAccessToken = () => {
     const accessToken = localStorage.getItem("access_token");
