@@ -1,6 +1,3 @@
-### What do you need to work on? 
-- Create a project
-- Look to see what you can build right now- 
 
 ## Development Steps
 
@@ -22,4 +19,14 @@
 4. other from the front page of this repo
 
 
-ps. Thank Juan its easy to display html pages via IPFS... Its almost as if IPFS was made for this (:D)
+ps. Thank the lord or Juan B. or someone that its easy to display html pages via IPFS... Its almost as if IPFS was made for this (:D)
+
+Input:
+
+- Create a text field, which requires text to be entered in the specified format.
+- Click + button to add to a list of links.
+- For each link in the list, clicking - button would remove it.
+
+Export:
+- Clicking the export button would send html to ipfs add http api?
+- The resulting CID would then be added to user's metadata?
