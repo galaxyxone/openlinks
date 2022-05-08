@@ -20,7 +20,7 @@
 
 - User creates IPFS website with info they want (HTML Generation page working on NOW)
   
-- PIN the website (ipfs add)
+- PIN the website (ipfs add http API)
 
 - Users personal website is linked with either IPFS CID or IPFS gateway link (return users CID to users system) 
 
