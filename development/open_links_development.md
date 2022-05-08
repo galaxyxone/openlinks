@@ -20,8 +20,9 @@
 
 
 ps. Thank the lord or Juan B. or someone that its easy to display html pages via IPFS... Its almost as if IPFS was made for this (:D)
+------------------------------------------------------------------------------------------------------------------------------------------------
 
-Important Milestones (Sprint Report)
+## Important Milestones (Sprint Report)
 
 Input:
 
