@@ -21,6 +21,8 @@
 
 ps. Thank the lord or Juan B. or someone that its easy to display html pages via IPFS... Its almost as if IPFS was made for this (:D)
 
+Important Milestones (Sprint Report)
+
 Input:
 
 - Create a text field, which requires text to be entered in the specified format.
@@ -30,3 +32,9 @@ Input:
 Export:
 - Clicking the export button would send html to ipfs add http api?
 - The resulting CID would then be added to user's metadata?
+
+Server side endpoints: One for an html page through a template engine, other for updating auth0 metadata.
+- The input fields and list.
+
+Lastly:
+- Integrate everything i.e., send the list to the rest endpoint to get an html page, then send that to IPFS node, and finally call the auth0 update metadata. 2 trips to your server and 1 trip to locql ipfs node.
