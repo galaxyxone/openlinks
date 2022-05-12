@@ -39,3 +39,8 @@ Server side endpoints: One for an html page through a template engine, other for
 
 Lastly:
 - Integrate everything i.e., send the list to the rest endpoint to get an html page, then send that to IPFS node, and finally call the auth0 update metadata. 2 trips to your server and 1 trip to locql ipfs node.
+
+### Server Setup: 
+
+Deploy S3 Bucket
+Deploy Server on EC2 Instance
