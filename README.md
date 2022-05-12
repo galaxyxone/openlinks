@@ -4,10 +4,10 @@
 
 ### Using IPFS public gateway, easily create personalized web-pages with user defined hyperlinks, photos, article, recipe(text), social post. Login to the app, add your links and create your own website link using IPFS. Users returned a CID and link. login and change the website and user is returned new link.
 
-
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](github.com)
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](https://ipfs.io/)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](github.com)
+
 
 - Users using Brave will use native IPFS. Users not on Brave, personal website loads using the IPFS Public Gateway. 
 
@@ -20,7 +20,7 @@
 
 - User creates IPFS website with info they want (HTML Generation page working on NOW)
   
-- PIN the website (ipfs add)
+- PIN the website (ipfs add http API)
 
 - Users personal website is linked with either IPFS CID or IPFS gateway link (return users CID to users system) 
 
