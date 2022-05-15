@@ -39,11 +39,7 @@ app.get("/builder", checkJwt, function(req, res) {
 });
 
 
-app.get("/admin", checkJwt, checkRole("admin"), function(req, res) {
-  res.json({
-    message: "Hello from an admin API!"
-  });
-});
+
 
 app.listen(3001);
 console.log("API server listening on " + process.env.REACT_APP_AUTH0_AUDIENCE);
