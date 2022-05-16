@@ -44,4 +44,3 @@ https://www.saltycrane.com/blog/2020/05/how-generate-static-html-using-react-typ
 
 <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
 
-### Make sure to write some tests at the end of this- Come up with good testing- You need to know where youre going
