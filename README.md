@@ -27,14 +27,7 @@
 
 -Ability to edit pages(either get a new link or use IPNS to keep names the same)
 
--Decentralized login(keep asking around and looking for best options)
-
-------------------------------------------------------------------------------------------------------------------------------------
-
-## Brave Integration
-
-- Users using Brave will use native IPFS.
-
+-Decentralized login(research best options)
 
 
 ### Current Limitations
