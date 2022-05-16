@@ -42,8 +42,5 @@
 For now, all IPFS communication is done using a local IPFS node. In the future, we want to be able to integrate our webapp using Brave browser. (This may work by default, webapp may run using http commands IDK,) TEST!
 
 
-https://www.saltycrane.com/blog/2020/05/how-generate-static-html-using-react-typescript-and-nodejs/
-
-
 <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
 
