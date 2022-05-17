@@ -6,11 +6,7 @@
 
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](https://ipfs.io/)
-
-
-- Users using Brave will use native IPFS. Users not on Brave, personal website loads using the IPFS Public Gateway. 
-
-## This project is still deep in development mode- come back soon for more updates
+ 
 ## Program Flow
 
 - User Loggs-In (https://openlinks.io) login basically finished
@@ -31,17 +27,12 @@
 
 -Ability to edit pages(either get a new link or use IPNS to keep names the same)
 
--Decentralized login(keep asking around and looking for best options)
+-Decentralized login(research best options)
 
+## Current Limitations
 
-
-- What is the easiest way to create and export a webpage within a React web-app?
-
-wise words via stack overflow- I'm not sure how familiar you are with jQuery, but you could either use the .on function to add an event listener to the input field where users will type their query, or there are individual functions that you can use as shortcuts to .on event listeners.
-
-https://www.saltycrane.com/blog/2020/05/how-generate-static-html-using-react-typescript-and-nodejs/
+### For now, all IPFS communication is done using a local IPFS node. In the future, we want to be able to integrate our webapp with the Brave browser. (WebApps communication may work by default, webapp may run using HTTP commands IDK,) Test and Figure Out!
 
 
 <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
 
-### Make sure to write some tests at the end of this- Come up with good testing- You need to know where youre going

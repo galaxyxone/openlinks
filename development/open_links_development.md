@@ -44,3 +44,8 @@ Lastly:
 
 Deploy S3 Bucket
 Deploy Server on EC2 Instance
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Notes moved from .md file
+https://www.saltycrane.com/blog/2020/05/how-generate-static-html-using-react-typescript-and-nodejs/
