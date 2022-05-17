@@ -29,10 +29,9 @@
 
 -Decentralized login(research best options)
 
-
 ### Current Limitations
 
-For now, all IPFS communication is done using a local IPFS node. In the future, we want to be able to integrate our webapp using Brave browser. (This may work by default, webapp may run using http commands IDK,) TEST!
+For now, all IPFS communication is done using a local IPFS node. In the future, we want to be able to integrate our webapp with the Brave browser. (WebApps communication may work by default, webapp may run using HTTP commands IDK,) Test and Figure Out!
 
 
 <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
