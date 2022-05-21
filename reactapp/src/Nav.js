@@ -10,6 +10,9 @@ class Nav extends Component {
           <li>
             <Link to="/">Home</Link>
           </li>
+          {isAuthenticated() && <li>
+            <Link to="/generate-links">Generate Links</Link>
+          </li>}
           <li>
             <Link to="/profile">Profile</Link>
           </li>

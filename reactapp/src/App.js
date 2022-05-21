@@ -6,6 +6,7 @@ import Nav from "./Nav";
 import Auth from "./Auth/Auth";
 import Callback from "./Callback";
 import Builder from "./Builder";
+import LinksPage from "./pages/LinksPage";
 
 
 
@@ -18,7 +19,8 @@ class App extends Component {
     return (
       <>
         <Nav auth={this.auth} />
-        <div className="body">
+        <div className="body"> 
+        {/* TODO: Add route guard? */}
           <Route
             path="/"
             exact
@@ -27,6 +29,10 @@ class App extends Component {
           <Route
             path="/callback"
             render={props => <Callback auth={this.auth} {...props} />}
+          />
+          <Route
+            path="/generate-links"
+            render={props => <LinksPage auth={this.auth} {...props} />}
           />
           <Route
             path="/profile"
