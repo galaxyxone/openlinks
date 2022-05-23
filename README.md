@@ -1,6 +1,6 @@
 # OpenLinks.io
 
-## This repo is a work in progress- We are building the milestones now
+## This repo is a work in progress 
 
 ### Using IPFS, easily create personalized web-pages with user defined hyperlinks, photos, article, recipe(text), social post. Login to the app, add your links and create your own website link. Users are returned a CID and link to their personal website. Login and change the website and user is returned new link.
 
@@ -13,9 +13,9 @@
 
 - User uses UI to create a .html page that gets added to either IPFS or Pinata(as advised on IPFS Docs, https://docs.ipfs.io/how-to/websites-on-ipfs/single-page-website/#set-up-a-domain)
 
-- User creates IPFS website with info they want (HTML Generation page working on NOW)
+- User creates IPFS website with info/links
   
-- PIN the website (ipfs add http API)
+- PIN the website (IPFS add http API)
 
 - Users personal website is linked with either IPFS CID or IPFS gateway link (return users CID to users system) 
 
