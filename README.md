@@ -1,6 +1,6 @@
 # OpenLinks.io
 
-## This repo is a work in progress- We are building the milestones now
+## This repo is a work in progress 
 
 ### Using IPFS, easily create personalized web-pages with user defined hyperlinks, photos, article, recipe(text), social post. Login to the app, add your links and create your own website link. Users are returned a CID and link to their personal website. Login and change the website and user is returned new link.
 
