@@ -21,6 +21,7 @@ class App extends Component {
         <Nav auth={this.auth} />
         <div className="body"> 
         {/* TODO: Add route guard? */}
+          
           <Route
             path="/"
             exact
