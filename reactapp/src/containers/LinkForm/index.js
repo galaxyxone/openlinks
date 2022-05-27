@@ -18,29 +18,29 @@ export default function LinkForm({ addLink }) {
 
   /**
    * @description Handles submission behavior of the form.
-   * @param {Link} data
+   * @param {{ url: string }} data
    */
   const onSubmit = (data) => {
     addLink(data);
     reset();
   };
   return (
-    <div className="add-link-container">
+    <form className="add-link-container" onSubmit={handleSubmit(onSubmit)}>
       <Input
-        label="Description"
-        name="description"
+        label="Url"
+        name="url"
         isRequired
+        regex={URL_REGEX}
         control={control}
       />
-      <Input label="Url" name="url" isRequired regex={URL_REGEX} control={control} />
       <button
         className="add-link-button"
+        type="submit"
         disabled={Object.keys(errors).length !== 0}
-        onClick={handleSubmit(onSubmit)}
       >
         Add
       </button>
-    </div>
+    </form>
   );
 }
 

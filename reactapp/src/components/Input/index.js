@@ -35,10 +35,10 @@ export default function Input({
       </label>
       {/* Move to an error component that renders each of them if there are many */}
       {error != null && error.type === "required" && (
-        <span className="input-error-message">This field is required.</span>
+        <span className="input-error-message">{label} is required.</span>
       )}
       {error != null && error.type === "pattern" && (
-        <span className="input-error-message">Invalid value.</span>
+        <span className="input-error-message">Value doesn't match the format of {label}.</span>
       )}
       <input
         ref={field.ref}

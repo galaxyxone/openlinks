@@ -4,10 +4,9 @@ import "./styles.css";
 /**
  * @description Renders each individual link object.
  */
-const Link = ({ id, description, url, removeLink }) => {
+const Link = ({ id, url, removeLink }) => {
   return (
     <div className="link-container">
-      <span className="link-text">{description}</span>
       <a href={url} className="link-text">
         {url}
       </a>
@@ -24,7 +23,7 @@ export default function LinksList({ links, removeLink }) {
   return (
     <div className="links-container">
       {links.map((link) => (
-        <Link {...link} removeLink={removeLink} />
+        <Link key={link.id} {...link} removeLink={removeLink} />
       ))}
     </div>
   );

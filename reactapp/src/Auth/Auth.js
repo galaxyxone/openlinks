@@ -1,5 +1,4 @@
 import auth0 from "auth0-js";
-import "./../types.jsdoc";
 
 export default class Auth {
 /**
@@ -16,7 +15,7 @@ export default class Auth {
       domain: process.env.REACT_APP_AUTH0_DOMAIN,
       clientID: process.env.REACT_APP_AUTH0_CLIENT_ID,
       redirectUri: process.env.REACT_APP_AUTH0_CALLBACK_URL,
-      scope: "openid profile read:current_user read:current_user_metadata update:current_user_metadata",
+      scope: "openid profile read:current_user update:current_user_metadata", // added appropriate scopes, remove if not needed.
       audience: process.env.REACT_APP_AUTH0_AUDIENCE,
       responseType: "token id_token",
     });
@@ -27,10 +26,14 @@ export default class Auth {
   };
 
   // Better use react's auth0 client and use context API for components.
-  initAuth0ManagementClient = () => {
+  /**
+   * @description takes in the auth0 access token and initialises the auth0 management API client.
+   * @param {string} token 
+   */
+  initAuth0ManagementClient = (token) => {
     this.#auth0Management = new auth0.Management({
       domain: process.env.REACT_APP_AUTH0_DOMAIN,
-      token: process.env.REACT_APP_AUTH0_MANAGEMENT_TOKEN,
+      token, // Auth0 access token is to be used to initialise management API
     });
   }
 
@@ -39,7 +42,10 @@ export default class Auth {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
         this.setUserId(authResult.idToken);
-        this.initAuth0ManagementClient();
+        // New additions
+        // Inits auth0 management client on login
+        this.initAuth0ManagementClient(authResult.accessToken);
+        // Inits user on login
         this.initUser();
         this.history.push("/");
       } else if (err) {
@@ -110,7 +116,7 @@ export default class Auth {
           }
         })
       } else {
-        reject({ err: 'Not logged In' });
+        reject({ err: 'User not initialised' });
       }
     });
   };
@@ -126,7 +132,7 @@ export default class Auth {
         if (err) {
           console.warn('Error getting user:', err);
         } else {
-          console.log('user with meta_data:', user);
+          console.log('user with meta_data:', user); // Remove log
           this.user = user;
         }
       });
@@ -146,7 +152,7 @@ export default class Auth {
     return accessToken;
   };
 
-  // Extra comment: Use the profile initialised from above?
+  // Extra comment: Use the profile initialised from above? Also, this can be converted to async function similar to above code.
   getProfile = cb => {
     if (this.userProfile) return cb(this.userProfile);
     this.auth0.client.userInfo(this.getAccessToken(), (err, profile) => {
@@ -157,3 +163,10 @@ export default class Auth {
 
  
 }
+
+// JSdoc Type definitions can be moved to different file.
+
+/**
+ * @typedef MetaData
+ * @property {string} fileHash
+ */

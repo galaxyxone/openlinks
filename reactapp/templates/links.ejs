@@ -50,14 +50,14 @@
 <body>
     <% 
         function cleanUrl(url) {
-            return url.replace('https://', '').replace('http://');
+            return url.replace('https://', '').replace('http://', '').replace("www.", "");
         }
     %>
     <div class="links-container">
         <h1><%= title %></h1>
-        <% links.forEach(function(link) { %>
-            <a class="link-buttons" href="<%= link %>" target="_blank">
-                <%= cleanUrl(link) %>
+        <% urls.forEach(function(url) { %>
+            <a class="link-buttons" href="<%= url %>" target="_blank">
+                <%= cleanUrl(url) %>
             </a>
             <% }); %>
     </div>
