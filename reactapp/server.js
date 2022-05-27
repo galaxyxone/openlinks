@@ -2,9 +2,12 @@
 
 const express = require("express");
 require("dotenv").config();
+const cors = require('cors');
 const jwt = require("express-jwt"); // Validate JWT and set req.user
 const jwksRsa = require("jwks-rsa"); // Retrieve RSA keys from a JSON Web Key set (JWKS) endpoint
 const ejs = require('ejs');
+
+const PORT = process.env.REACT_APP_SERVER_PORT ?? 3001;
 
 /**
  * @description Root template directory
@@ -39,7 +42,25 @@ const app = express();
  */
 app.use(express.json({}));
 
+app.use(cors({
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200,
+  methods: ['GET', 'POST'],
+}))
+
 // Note: You can move these helper functions to different files.
+
+/**
+ * @description Removes unsecure response headers
+ * @param {express.Request} request
+ * @param {express.Response} response
+ * @param {express.NextFunction} next
+ * @returns {void}
+ */
+function removeUnsecureHeaders(_, response, next) {
+  response.removeHeader('X-Powered-By');
+  next();
+}
 
 /**
  * @description Utility function that generates an object with error message.
@@ -55,21 +76,24 @@ const getErrorMessage = (message) => ({ message })
  */
 const getTemplateDir = (directory, fileName) => directory + fileName;
 
+app.use(removeUnsecureHeaders);
+
 app.post("/generate", function (request, response) {
   const filePath = getTemplateDir(templateDir, "links.ejs");
 
   // Validate request's body, throw error otherwise
   if (!request.body?.title) {
     response.status(400).send(getErrorMessage('No title provided'));
-  } else if (request.body?.links?.length === 0) {
-    response.status(400).send(getErrorMessage("No links provided"));
+  } else if (request.body?.urls?.length === 0) {
+    response.status(400).send(getErrorMessage("No urls provided"));
   } else {
-    ejs.renderFile(filePath, {
-      title: request.body.title,
-      links: request.body.links,
-    })
-      .then(html => {
-        response.type('html').send(html);
+    ejs
+      .renderFile(filePath, {
+        title: request.body.title,
+        urls: request.body.urls,
+      })
+      .then((html) => {
+        response.type("html").send(html);
       })
       .catch(console.error);
   }
@@ -94,5 +118,5 @@ app.get("/builder", checkJwt, function(req, res) {
 //   });
 // });
 
-app.listen(process.env.SERVER_PORT);
-console.log("API server listening on " + process.env.REACT_APP_AUTH0_AUDIENCE + ":" + process.env.SERVER_PORT);
+app.listen(PORT);
+console.log("API server listening on " + PORT);

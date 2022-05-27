@@ -1,0 +1,19 @@
+.export-btn {
+    width: 250px;
+    height: 50px;
+    border: none;
+    background-color: #5956ff;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+}
+
+.export-btn:hover {
+    background-color: #6967fe;
+}
+
+.export-container {
+    display: flex;
+    align-items: flex-end;
+}

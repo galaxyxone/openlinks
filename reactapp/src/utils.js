@@ -9,6 +9,7 @@ export function clsx(...classes) {
 }
 
 /**
+ * @description Sample method that generates a random ID. Can be replaced by any blackbox ID generation algorithm.
  * @returns {string} generates a random string ID. Length of ID is 16 by default
  */
 export function generateId(length = 16) {
@@ -27,16 +28,47 @@ export function generateId(length = 16) {
 
 /**
  * @description Filters null values from the object
- * @param  {...object} objects 
+ * @param  {...object} objects
  * @returns {object}
  */
 export function filterNullValues(object) {
   const finalObject = {};
 
-  Object.keys(object).filter(key => object[key] != null).forEach(key => {
-    finalObject[key] = object[key];
-  });
+  Object.keys(object)
+    .filter((key) => object[key] != null)
+    .forEach((key) => {
+      finalObject[key] = object[key];
+    });
 
   return finalObject;
 }
-/** object.keys-inactive */
+
+/**
+ * @description Handles each content-type of the response
+ * @param {Response} response
+ * @returns {Promise<Response.Body>}
+ */
+async function fetchContentTypeHandler(response) {
+  switch (response.headers.get("content-type")) {
+    case "application/json":
+      return response.json();
+    case "text/html":
+    default:
+      return response.text();
+  }
+}
+
+/**
+ * @description Handles
+ * @param {Response} response
+ * @returns {Promise<any>}
+ */
+export async function fetchHandler(response) {
+  if (response.ok) {
+    return fetchContentTypeHandler(response);
+  } else {
+    return response.json().then((err) => {
+      throw err;
+    });
+  }
+}

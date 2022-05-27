@@ -14,6 +14,8 @@ export const linksReducer = (state = [], action) => {
       return [...state, { ...action.payload, id: generateId() }];
     case LINK_ACTIONS.REMOVE_LINK:
       return state.filter((link) => link.id !== action.payload.id);
+    case LINK_ACTIONS.RESET:
+      return [];
     default:
       return state;
   }

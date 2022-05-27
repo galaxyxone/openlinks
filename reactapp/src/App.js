@@ -8,38 +8,37 @@ import Callback from "./Callback";
 import Builder from "./Builder";
 import LinksPage from "./pages/LinksPage";
 
-
-
 class App extends Component {
   constructor(props) {
     super(props);
-    this.auth = new Auth(this.props.history);
+    this.state = {
+      auth: new Auth(this.props.history)
+    }
   }
   render() {
     return (
       <>
-        <Nav auth={this.auth} />
+        <Nav auth={this.state.auth} />
         <div className="body"> 
         {/* TODO: Add route guard? */}
-          
           <Route
             path="/"
             exact
-            render={props => <Home auth={this.auth} {...props} />}
+            render={props => <Home auth={this.state.auth} {...props} />}
           />
           <Route
             path="/callback"
-            render={props => <Callback auth={this.auth} {...props} />}
+            render={props => <Callback auth={this.state.auth} {...props} />}
           />
           <Route
             path="/generate-links"
-            render={props => <LinksPage auth={this.auth} {...props} />}
+            render={props => <LinksPage auth={this.state.auth} {...props} />}
           />
           <Route
             path="/profile"
             render={props =>
-              this.auth.isAuthenticated() ? (
-                <Profile auth={this.auth} {...props} />
+              this.state.auth.isAuthenticated() ? (
+                <Profile auth={this.state.auth} {...props} />
               ) : (
                 <Redirect to="/" />
               )
@@ -48,10 +47,10 @@ class App extends Component {
           <Route
             path="/builder"
             render={props =>
-              this.auth.isAuthenticated() ? (
-                <Builder auth={this.auth} {...props} />
+              this.state.auth.isAuthenticated() ? (
+                <Builder auth={this.state.auth} {...props} />
               ) : (
-                this.auth.login()
+                this.state.auth.login()
               )
             }
           />
