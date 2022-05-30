@@ -23,25 +23,6 @@
 
 - Users personal website is linked with either IPFS CID or IPFS gateway link (return users CID to users system) 
 
-## Future Features
-
--Eventually upgrade with IPNS
-
--Add video support(mp4,ect)
-
--Ability to edit pages(either get a new link or use IPNS to keep names the same)
-
--Decentralized login(keep asking around and looking for best options)
-
-
-
-- What is the easiest way to create and export a webpage within a React web-app?
-
-wise words via stack overflow- I'm not sure how familiar you are with jQuery, but you could either use the .on function to add an event listener to the input field where users will type their query, or there are individual functions that you can use as shortcuts to .on event listeners.
-
-https://www.saltycrane.com/blog/2020/05/how-generate-static-html-using-react-typescript-and-nodejs/
-
-
 <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
 
 ### Make sure to write some tests at the end of this- Come up with good testing- You need to know where youre going
