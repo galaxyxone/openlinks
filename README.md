@@ -2,7 +2,9 @@
 
 ## This repo is a work in progress- FYI nothing works yet
 
-### Using IPFS public gateway, easily create personalized web-pages with user defined hyperlinks, photos, article, recipe(text), social post. Login to the app, add your links and create your own website link using IPFS. Users returned a CID and link. login and change the website and user is returned new link.
+### Using IPFS and the IPFS public gateway, easily create personalized web-pages with user defined hyperlinks(photos, article, recipe, social post). Login to the app, add your links and create your own website link using IPFS. Users returned a CID and link. Login to openlinks.io again to change the website anytime(users website link is updated with a new one).
+
+Currently we are trying to get this app to work in Chrome- its working in any non-chromium browsers
 
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](https://ipfs.io/)
