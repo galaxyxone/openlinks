@@ -15,8 +15,7 @@ Currently we are trying to get this app to work in Chrome- its working in any no
 ## This project is still deep in development mode- come back soon for more updates
 ## Program Flow
 
-- User Loggs-In (https://openlinks.io) login basically finished
-
+- User Loggs-In (https://openlinks.io) 
 - User uses UI to create a .html page that gets added to either IPFS or Pinata(as advised on IPFS Docs, https://docs.ipfs.io/how-to/websites-on-ipfs/single-page-website/#set-up-a-domain)
 
 - User creates IPFS website with info they want (HTML Generation page working on NOW)
