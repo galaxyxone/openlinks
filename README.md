@@ -17,7 +17,6 @@
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](https://ipfs.io/)
 
-<img width="1035" alt="Screen Shot 2022-06-07 at 1 36 26 AM" src="https://user-images.githubusercontent.com/30084404/172312294-1c4147e3-d0f1-432a-aa11-6d53fcd3821c.png">
 <img width="1036" alt="Screen Shot 2022-06-07 at 1 35 53 AM" src="https://user-images.githubusercontent.com/30084404/172312297-65286008-e3b9-43ae-a4bc-117da4fe3498.png">
 
 - User Loggs-In (https://openlinks.io) 
