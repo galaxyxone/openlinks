@@ -20,12 +20,7 @@
 - User Loggs-In (https://openlinks.io) 
 - User uses UI to create a .html page
 - HTML page is exported to IPFS
-- User is returned
-
-- User creates IPFS website with info they want 
-  
-- PIN the website to IPFS using local IPFS node
-
+- User is returned IPFS Webpage address
 - Users personal website is linked with either IPFS CID or IPFS gateway link (return users CID to users system) 
 
 <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
