@@ -32,4 +32,3 @@
 
 ### Make sure to write some tests at the end of this- Come up with good testing- 
 
-<img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
