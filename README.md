@@ -25,10 +25,5 @@
 - Users personal website is linked with either IPFS CID or IPFS gateway link (return users CID to users system) 
 
 
-<img width="1410" alt="Screen Shot 2022-06-13 at 10 37 30 PM" src="https://user-images.githubusercontent.com/30084404/173488351-f306e1ab-c231-44f9-8724-db44efe190cf.png">
-
-
 <img width="1036" alt="Screen Shot 2022-06-07 at 1 35 53 AM" src="https://user-images.githubusercontent.com/30084404/172312297-65286008-e3b9-43ae-a4bc-117da4fe3498.png">
-
-### Make sure to write some tests at the end of this- Come up with good testing- 
 
