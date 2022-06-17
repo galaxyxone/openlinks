@@ -6,6 +6,9 @@ export default class Auth {
  * @description Private property to store the Auth0 Management API client.
  */
   #auth0Management = null;
+  /**
+   * @type {auth0.Auth0UserProfile | null}
+   */
   user = null;
 
   constructor(history) {
@@ -112,6 +115,7 @@ export default class Auth {
           if (err) {
             reject(err)
           } else {
+            this.user = user;
             resolve(user);
           }
         })

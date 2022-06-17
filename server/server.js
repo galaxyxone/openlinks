@@ -1,13 +1,17 @@
 // Note to Logan, Push .env with empty values to the branch to make it easier for yourself and other developers :)
 
 const express = require("express");
-require("dotenv").config();
 const cors = require('cors');
 const jwt = require("express-jwt"); // Validate JWT and set req.user
 const jwksRsa = require("jwks-rsa"); // Retrieve RSA keys from a JSON Web Key set (JWKS) endpoint
 const ejs = require('ejs');
 
-const PORT = process.env.REACT_APP_SERVER_PORT ?? 3001;
+const PORT = process.env.PORT ?? 3001;
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
 
 /**
  * @description Root template directory
@@ -23,13 +27,13 @@ const checkJwt = jwt({
     rateLimit: true,
     jwksRequestsPerMinute: 5, // prevent attackers from requesting more than 5 per minute
     jwksUri: `https://${
-      process.env.REACT_APP_AUTH0_DOMAIN
+      process.env.AUTH0_DOMAIN
     }/.well-known/jwks.json`
   }),
 
   // Validate the audience and the issuer.
-  audience: process.env.REACT_APP_AUTH0_AUDIENCE,
-  issuer: `https://${process.env.REACT_APP_AUTH0_DOMAIN}/`,
+  audience: process.env.AUTH0_AUDIENCE,
+  issuer: `https://${process.env.AUTH0_DOMAIN}/`,
 
   // This must match the algorithm selected in the Auth0 dashboard under your app's advanced settings under the OAuth tab
   algorithms: ["RS256"]
@@ -42,8 +46,10 @@ const app = express();
  */
 app.use(express.json({}));
 
+console.log('client:'+process.env.CLIENT_DOMAIN)
+
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: process.env.CLIENT_DOMAIN,
   optionsSuccessStatus: 200,
   methods: ['GET', 'POST'],
 }))

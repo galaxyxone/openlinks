@@ -72,3 +72,11 @@ export async function fetchHandler(response) {
     });
   }
 }
+
+/**
+ * @param {string} fileHash
+ * @returns {string}
+ */
+export function generateIPFSGatewayURL(fileHash) {
+  return `https://gateway.ipfs.io/ipfs/${fileHash}`;
+}
