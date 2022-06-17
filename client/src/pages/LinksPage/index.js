@@ -1,6 +1,7 @@
 import React, { useCallback, useReducer } from "react";
 import { LINK_ACTIONS } from "../../actions";
 import Export from "../../containers/Export";
+import LastExported from "../../containers/LastExported";
 import LinkForm from "../../containers/LinkForm";
 import LinksList from "../../containers/LinksList";
 import { useIPFS } from "../../contexts";
@@ -8,6 +9,16 @@ import { linksReducer } from "../../reducers";
 import { generatePage } from "./../../api";
 
 import "./styles.css";
+
+/**
+ * @typedef GenerateLinksPageProps
+ * @property {import("../../Auth/Auth").default} auth
+ */
+
+/**
+ * @param {GenerateLinksPageProps} props
+ * @returns
+ */
 
 export default function LinksPage({ auth }) {
   /**
@@ -45,9 +56,9 @@ export default function LinksPage({ auth }) {
           content: page,
           path: `/${filename}.html`,
         });
-        await auth.updateMetaData({ file_hash: cid.toString() });
+        await auth.updateMetaData({ fileHash: cid.toString() });
         // Replace below with whatever you want to tell to the user. I think replacing this with a toaster message will look much better to the user :)
-        alert("Added file to local IPFS node! and updated metadata\nHash: " + cid);
+        alert("Added file to IPFS node! and updated metadata\nHash: " + cid);
         resetLinks();
       } catch (error) {
         console.trace(error);
@@ -61,6 +72,10 @@ export default function LinksPage({ auth }) {
       <LinksList links={links} removeLink={removeLink} />
       <LinkForm addLink={addLink} />
       {links.length > 0 && <Export exportFile={handleExport} links={links} />}
+      {/* Only show last exported page when user is authenticated and user's data is fetched through management API successfully */}
+      {auth.isAuthenticated() && auth.user && (
+        <LastExported fileHash={auth.user.user_metadata.fileHash} />
+      )}
     </div>
   );
 }

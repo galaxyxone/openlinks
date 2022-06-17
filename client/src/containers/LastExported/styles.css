@@ -1,0 +1,22 @@
+.last-exported-container {
+    margin: 8px 16px;
+    color: white;
+}
+
+.last-exported-url {
+    color: white;
+    text-decoration: none;
+}
+
+.last-exported-url:visited {
+    color: #b6b4ff;
+}
+
+.last-exported-url:hover {
+    color: #c9c9c9;
+}
+
+.last-exported-url:active {
+    color: #7a7a7a;
+}
+

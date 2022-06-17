@@ -20,14 +20,10 @@ export default function LinkForm({ addLink }) {
    * @description Handles submission behavior of the form.
    * @param {{ url: string }} data
    */
-
-
   const onSubmit = (data) => {
     addLink(data);
     reset();
   };
-
-
   return (
     <form className="add-link-container" onSubmit={handleSubmit(onSubmit)}>
       <Input
@@ -47,7 +43,6 @@ export default function LinkForm({ addLink }) {
     </form>
   );
 }
-
 
 LinkForm.propTypes = {
   addLink: PropTypes.func.isRequired,

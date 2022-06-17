@@ -56,7 +56,7 @@
     <div class="links-container">
         <h1><%= title %></h1>
         <% urls.forEach(function(url) { %>
-            <a class="link-buttons" href="<%= url %>" target="_blank">
+            <a class="link-buttons" href="<%= url %>" target="_blank" rel="noopener noreferrer">
                 <%= cleanUrl(url) %>
             </a>
             <% }); %>

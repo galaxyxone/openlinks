@@ -1,23 +1,15 @@
 {
-  "name": "react-auth0",
+  "name": "openlinks-client",
   "version": "0.1.0",
   "builder": true,
   "homepage": "/app",
   "dependencies": {
-    "@types/node": "^14.0.4",
     "@types/prettier": "^2.0.0",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "auth0-js": "^9.8.0",
     "auth0-lock": "^11.10.0",
-    "cors": "^2.8.5",
-    "ejs": "^3.1.8",
-    "express": "^4.16.3",
-    "express-jwt": "^5.3.1",
-    "express-jwt-authz": "^1.0.0",
     "ipfs-http-client": "^56.0.3",
-    "jwks-rsa": "^1.3.0",
-    "npm-run-all": "^4.1.3",
     "prettier": "^2.0.5",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -27,12 +19,9 @@
     "typescript": "^3.9.3"
   },
   "scripts": {
-    "start": "run-p start:client start:server",
-    "start:client": "react-scripts start",
-    "start:server": "node server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "nodemon": "nodemon server.js",
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:3001",
@@ -44,8 +33,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "nodemon": "^2.0.16"
-  }
+  ]
 }
