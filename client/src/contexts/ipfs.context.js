@@ -5,7 +5,7 @@ import { getFilesFromPath } from 'web3.storage'
 
 // Construct with token and endpoint
 
-const client = new Web3Storage ({ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDY3RDY5ZjFBYzFENDUwRDJFRDYyRWNiRUFEMTBmODEwYUM3MDA0QTEiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NTU1MjI5NjI5MDIsIm5hbWUiOiJ0aGFua3lvdSJ9.As_mp65zsVQTF1JxwMEyWwT-rqdjTifzg4MvzKAawjk });
+const client = new Web3Storage ({ token:  });
 
 const files = await
 
