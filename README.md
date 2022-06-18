@@ -29,4 +29,4 @@
 
 We are adding fixes ASAP- Web3.Storage integration is top priority
 
-My example website gateway.ipfs.io/ipfs/QmXghpAZy7nUPdJ6EQTUmmsLuJDvCu217ZSTd3tsMwRnUD
+My example website http://gateway.ipfs.io/ipfs/QmXghpAZy7nUPdJ6EQTUmmsLuJDvCu217ZSTd3tsMwRnUD
