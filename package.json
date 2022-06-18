@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "web3.storage": "^4.2.0"
+  }
+}
