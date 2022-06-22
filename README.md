@@ -3,7 +3,9 @@
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](https://ipfs.io/)
 
-## As long as your local IPFS node is running, it should work! https://openlinks.io
+## https://openlinks.io
+
+## As long as your local IPFS node is running, it should work!
 
 ## This repo is a work in progress- KNOWN BUGS BELOW!
 - React UI gets a little buggy when adding hyperlinks(not a big issue, better react)
