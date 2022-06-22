@@ -77,6 +77,8 @@ export async function fetchHandler(response) {
  * @param {string} fileHash
  * @returns {string}
  */
+
+/** Finally I get to do that thing I want to do- with the curve thing :) */
 export function generateIPFSGatewayURL(fileHash) {
   return `https://gateway.ipfs.io/ipfs/${fileHash}`;
 }
