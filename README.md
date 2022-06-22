@@ -5,8 +5,6 @@
 
 ## https://openlinks.io
 
-## As long as your local IPFS node is running, it should work!
-
 ## This repo is a work in progress- KNOWN BUGS BELOW!
 - React UI gets a little buggy when adding hyperlinks(not a big issue, better react)
 - Need to be more specific about required format for links (tell users to fix with "http://www.example.com")
@@ -14,6 +12,7 @@
 
 ### Using IPFS and the IPFS public gateway, easily create personalized web-pages with user defined hyperlinks(photos, article, recipe, social post). 
 
+- Make sure IPFS Node is powered on
 - Login to the app, add your links and create your own website link using IPFS. User is returned a CID and link. 
 - Login to openlinks.io again to change the website anytime(users website link is updated with a new one).
 
