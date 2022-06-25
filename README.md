@@ -3,7 +3,8 @@
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](https://ipfs.io/)
 
-## This is an in-progress intregration with Web3.Storage 
+
+## https://openlinks.io
 
 ## This repo is a work in progress- KNOWN BUGS BELOW!
 - React UI gets a little buggy when adding hyperlinks(not a big issue, better react)
@@ -12,6 +13,7 @@
 
 ### Using IPFS and the IPFS public gateway, easily create personalized web-pages with user defined hyperlinks(photos, article, recipe, social post). 
 
+- Make sure IPFS Node is powered on
 - Login to the app, add your links and create your own website link using IPFS. User is returned a CID and link. 
 - Login to openlinks.io again to change the website anytime(users website link is updated with a new one).
 
