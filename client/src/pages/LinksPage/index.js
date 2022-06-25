@@ -58,7 +58,7 @@ export default function LinksPage({ auth }) {
         });
         await auth.updateMetaData({ fileHash: cid.toString() });
         // Replace below with whatever you want to tell to the user. I think replacing this with a toaster message will look much better to the user :)
-        alert("Added file to IPFS node! and updated metadata\nHash: " + cid);
+        alert("Added file to IPFS node and updated metadata!\nHash: " + cid);
         resetLinks();
       } catch (error) {
         console.trace(error);
