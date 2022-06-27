@@ -18,7 +18,7 @@
 
 <img width="1411" alt="Screen Shot 2022-06-13 at 10 37 42 PM" src="https://user-images.githubusercontent.com/30084404/173488343-effee3e2-6e61-4a05-a590-5a2b32079dd1.png">
 
-
+## User Flow
 - User Loggs-In (https://openlinks.io) 
 - User uses UI to create a .html page
 - HTML page is exported to IPFS
