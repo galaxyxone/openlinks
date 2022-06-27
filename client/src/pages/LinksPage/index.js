@@ -44,6 +44,7 @@ export default function LinksPage({ auth }) {
    * @description Handle export functionality.
    * @type {(data: { filename: string, links: Link[] }) => Promise<void>}
    */
+
   const handleExport = useCallback(
     async ({ filename, links }) => {
       try {
@@ -58,7 +59,7 @@ export default function LinksPage({ auth }) {
         });
         await auth.updateMetaData({ fileHash: cid.toString() });
         // Replace below with whatever you want to tell to the user. I think replacing this with a toaster message will look much better to the user :)
-        alert("Added file to IPFS node and updated metadata!\nHash: " + cid);
+        alert("Added file to IPFS(web3.storage) and updated metadata!\nHash: " + cid);
         resetLinks();
       } catch (error) {
         console.trace(error);
