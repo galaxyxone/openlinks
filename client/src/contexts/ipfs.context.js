@@ -17,4 +17,3 @@ export const IPFSProvider = IPFSContext.Provider;
  */
 export const useIPFS = () => React.useContext(IPFSContext);
 
-// Integrate Web3.Storage here
