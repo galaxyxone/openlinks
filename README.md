@@ -9,7 +9,6 @@
 ## This repo is a work in progress- KNOWN BUGS BELOW!
 - React UI gets a little buggy when adding hyperlinks(not a big issue, better react)
 - Need to be more specific about required format for links.
-- IPFS Files are not pinned by system! Local IPFS node needs to stay up for personal website to remain avaliable via IPFS and gateway(fix ASAP)
 
 ### Using IPFS and the IPFS public gateway, easily create personalized web-pages with user defined hyperlinks(photos, article, recipe, social post). 
 
