@@ -16,10 +16,9 @@
 - Login to the app, add your links and create your own website link using IPFS. User is returned a CID and link. 
 - Login to openlinks.io again to change the website anytime(users website link is updated with a new one).
 
-<img width="1411" alt="Screen Shot 2022-06-13 at 10 37 42 PM" src="https://user-images.githubusercontent.com/30084404/173488343-effee3e2-6e61-4a05-a590-5a2b32079dd1.png">
 
 ## User Flow
-- User Loggs-In (https://openlinks.io) 
+- User logs-in (https://openlinks.io) 
 - User uses UI to create a .html page
 - HTML page is exported to IPFS
 - User is returned IPFS Webpage address
