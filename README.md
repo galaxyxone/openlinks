@@ -6,10 +6,7 @@
 
 ## https://openlinks.io
 
-## This repo is a work in progress- KNOWN BUGS BELOW!
-- React UI gets a little buggy when adding hyperlinks(not a big issue, better react)
-- Need to be more specific about required format for links.
-
+## This repo is a work in progress-
 ### Using Web3.Storage and the IPFS public gateway, easily create personalized web-pages with user defined hyperlinks(photos, article, recipe, social post). 
 
 - Login to the app, add your links and create your own website link using IPFS. User is returned a CID and link. 
