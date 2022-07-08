@@ -1,12 +1,11 @@
-import React, { useCallback, useReducer } from "react";
+import React, { useCallback, useReducer, useState } from "react";
 import { LINK_ACTIONS } from "../../actions";
 import Export from "../../containers/Export";
 import LastExported from "../../containers/LastExported";
 import LinkForm from "../../containers/LinkForm";
-import LinksList from "../../containers/LinksList";
-import { useIPFS } from "../../contexts";
+import LinkList from "../../containers/LinkList";
 import { linksReducer } from "../../reducers";
-import { generatePage } from "./../../api";
+import { exportLinks } from "../../api";
 
 import "./styles.css";
 
@@ -20,12 +19,12 @@ import "./styles.css";
  * @returns
  */
 
-export default function LinksPage({ auth }) {
+export default function ExportLinksPage({ auth }) {
   /**
    * States
    */
   const [links, dispatch] = useReducer(linksReducer, []); // Uses reducer pattern to manage links state array
-  const ipfs = useIPFS();
+  const [isLoading, setLoading] = useState(false);
 
   /**
    * Handlers
@@ -47,36 +46,39 @@ export default function LinksPage({ auth }) {
   const handleExport = useCallback(
     async ({ filename, links }) => {
       try {
-        console.log("DATA:", filename);
-        const page = await generatePage({
+        setLoading(true);
+        const { cid, filename: exportedFileName } = await exportLinks({
           title: filename,
-          urls: links.map((link) => link.url),
+          links: links.map((link) => ({ title: link.title, url: link.url })),
         });
-        const { cid } = await ipfs.add({
-          content: page,
-          path: `/${filename}.html`,
-        });
-        await auth.updateMetaData({ fileHash: cid.toString() });
+        await auth.updateMetaData({ cid, filename: exportedFileName });
         // Replace below with whatever you want to tell to the user. I think replacing this with a toaster message will look much better to the user :)
-        alert("Added file to IPFS node and updated metadata!\nHash: " + cid);
+        alert("Added file to Web3.Storage! and updated metadata\nHash: " + cid);
         resetLinks();
       } catch (error) {
         console.trace(error);
       }
+      setLoading(false);
     },
-    [links]
+    [auth]
   );
 
-  return (
+  return isLoading ? (
+    <h3>Loading...</h3>
+  ) : (
     <div className="links-page-container">
-      <LinksList links={links} removeLink={removeLink} />
+      <LinkList links={links} removeLink={removeLink} />
       <LinkForm addLink={addLink} />
       {links.length > 0 && <Export exportFile={handleExport} links={links} />}
       {/* Only show last exported page when user is authenticated and user's data is fetched through management API successfully */}
-      {auth.isAuthenticated() && auth.user && (
-        <LastExported fileHash={auth.user.user_metadata.fileHash} />
-      )}
+      {auth.isAuthenticated() &&
+        auth.user?.user_metadata?.cid &&
+        auth.user?.user_metadata?.filename && (
+          <LastExported
+            cid={auth.user.user_metadata.cid}
+            filename={auth.user.user_metadata.filename}
+          />
+        )}
     </div>
   );
 }
-

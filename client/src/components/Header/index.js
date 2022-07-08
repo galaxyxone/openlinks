@@ -1,12 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-class Nav extends Component {
-  render() {
-    const { isAuthenticated, login, logout } = this.props.auth;
-    return (
-      <nav>
-        <ul>
+import "./styles.css";
+
+function Header(props) {
+  const { isAuthenticated, login, logout } = props.auth;
+  return (
+    <nav>
+      <ul className="nav-ul">
+        <span className="nav-list-left">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -15,15 +17,17 @@ class Nav extends Component {
               <Link to="/export-links">Export Links</Link>
             </li>
           )}
+        </span>
+        <span className="nav-list-right">
           <li>
             <button onClick={isAuthenticated() ? logout : login}>
               {isAuthenticated() ? "Log Out" : "Log In"}
             </button>
           </li>
-        </ul>
-      </nav>
-    );
-  }
+        </span>
+      </ul>
+    </nav>
+  );
 }
 
-export default Nav;
+export default Header;

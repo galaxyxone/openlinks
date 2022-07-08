@@ -173,4 +173,5 @@ export default class Auth {
 /**
  * @typedef MetaData
  * @property {string} fileHash
+ * @property {string} filename
  */
