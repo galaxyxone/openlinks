@@ -29,5 +29,6 @@
 
 ## Current Work
 - Adding titles to links (UI Improvements)
+- Improved fields for the "add links" feature (Box with remove button)
 
 My example website http://gateway.ipfs.io/ipfs/QmXghpAZy7nUPdJ6EQTUmmsLuJDvCu217ZSTd3tsMwRnUD
