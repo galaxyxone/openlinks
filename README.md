@@ -14,7 +14,7 @@
 
 
 ## User Flow
-- User logs-in (https://openlinks.io) 
+- [User logs-in](https://openlinks.io) 
 - User uses UI to create a .html page
 - HTML page is exported to IPFS
 - User is returned IPFS Webpage address
@@ -32,4 +32,5 @@
 - Improved fields for the "add links" feature (UI Improvements)
 - Add node.js api for link titles (UI Improvements)
 
-My example website http://gateway.ipfs.io/ipfs/QmXghpAZy7nUPdJ6EQTUmmsLuJDvCu217ZSTd3tsMwRnUD
+[My example website](https://bafybeie2b4dzndtisdd455aokww3gv4fto5qxhgvpvrk32er4hdxyiufem.ipfs.dweb.link/Mylinks.html)
+
