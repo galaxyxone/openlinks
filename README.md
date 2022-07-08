@@ -28,7 +28,7 @@
 - Fixed hyperlink space's problem
 
 ## Current Work
-# Adding titles to links feature(UI Improvements)
+### Adding titles to links feature(UI Improvements)
 - Improved fields for the "add links" feature (UI Improvements)
 - Add node.js api for link titles (UI Improvements)
 
