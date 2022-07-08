@@ -27,4 +27,7 @@
 - Web3 Storage Integration
 - Fixed hyperlink space's problem
 
+## Current Work
+- Adding titles to links (UI Improvements)
+
 My example website http://gateway.ipfs.io/ipfs/QmXghpAZy7nUPdJ6EQTUmmsLuJDvCu217ZSTd3tsMwRnUD
