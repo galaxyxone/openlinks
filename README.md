@@ -28,7 +28,8 @@
 - Fixed hyperlink space's problem
 
 ## Current Work
-- Adding titles to links (UI Improvements)
-- Improved fields for the "add links" feature (Box with remove button)
+### Adding titles to links feature(UI Improvements)
+- Improved fields for the "add links" feature (UI Improvements)
+- Add node.js api for link titles (UI Improvements)
 
 My example website http://gateway.ipfs.io/ipfs/QmXghpAZy7nUPdJ6EQTUmmsLuJDvCu217ZSTd3tsMwRnUD
