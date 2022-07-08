@@ -6,6 +6,7 @@
 /**
  * @typedef Link
  * @property {string} id
+ * @property {string} title
  * @property {string} url
  */
 

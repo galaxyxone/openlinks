@@ -27,6 +27,12 @@ export default function LinkForm({ addLink }) {
   return (
     <form className="add-link-container" onSubmit={handleSubmit(onSubmit)}>
       <Input
+        label="Title"
+        name="title"
+        isRequired
+        control={control}
+      />
+      <Input
         label="Url"
         name="url"
         isRequired
@@ -47,6 +53,3 @@ export default function LinkForm({ addLink }) {
 LinkForm.propTypes = {
   addLink: PropTypes.func.isRequired,
 };
-
-
-
