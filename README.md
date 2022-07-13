@@ -14,7 +14,7 @@
 
 
 ## User Flow
-- [User logs in @ Openlinks.io](https://openlinks.io) 
+- [User signs in @ Openlinks.io](https://openlinks.io) 
 - User uses UI to create a .html page
 - HTML page is exported to IPFS
 - User is returned IPFS Webpage address
