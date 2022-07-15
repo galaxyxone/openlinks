@@ -32,6 +32,7 @@
 ### Adding titles to links feature(UI Improvements)
 - Improved fields for the "add links" feature (UI Improvements)
 - Add node.js api for link titles (UI Improvements)
+- redo splash page
 
 [My example website](https://bafybeie2b4dzndtisdd455aokww3gv4fto5qxhgvpvrk32er4hdxyiufem.ipfs.dweb.link/Mylinks.html)
 
