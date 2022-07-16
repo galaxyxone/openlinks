@@ -14,11 +14,11 @@
 
 
 ## User Flow
-- User logs-in (https://openlinks.io) 
-- User uses UI to create a .html page
-- HTML page is exported to IPFS
-- User is returned IPFS Webpage address
-- Users personal website is linked with IPFS gateway address
+- [User signs in @ Openlinks.io](https://openlinks.io) 
+- User uses UI to create a personalized web-page
+- web-page page is exported to IPFS(web3.storage)
+- User is returned IPFS "Webpage" address
+- Using various IPFS Gateways, users can access webpages from anywhere
 
 
 <img width="1036" alt="Screen Shot 2022-06-07 at 1 35 53 AM" src="https://user-images.githubusercontent.com/30084404/172312297-65286008-e3b9-43ae-a4bc-117da4fe3498.png">
@@ -26,10 +26,15 @@
 ## Recent Additions
 - Web3 Storage Integration
 - Fixed hyperlink space's problem
+- Titles
 
 ## Current Work
 ### Adding titles to links feature(UI Improvements)
 - Improved fields for the "add links" feature (UI Improvements)
 - Add node.js api for link titles (UI Improvements)
+- redo splash page
 
-My example website http://gateway.ipfs.io/ipfs/QmXghpAZy7nUPdJ6EQTUmmsLuJDvCu217ZSTd3tsMwRnUD
+Important Update ASAP: Documentation with Web3.Storage instead of local integration
+
+[My example website](https://bafybeie2b4dzndtisdd455aokww3gv4fto5qxhgvpvrk32er4hdxyiufem.ipfs.dweb.link/Mylinks.html)
+

@@ -1,13 +1,13 @@
 import React, { useMemo } from "react";
 import PropTypes from "prop-types";
 
-import { generateIPFSGatewayURL } from "../../utils";
+import { generateIPFSFileURL } from "../../utils";
 import './styles.css';
 /**
  * @description Renders last exported URL message for the user.
  */
-export default function LastExported({ fileHash }) {
-  const ipfsUrl = useMemo(() => generateIPFSGatewayURL(fileHash), [fileHash]);
+export default function LastExported({ cid, filename }) {
+  const ipfsUrl = useMemo(() => generateIPFSFileURL(cid, filename), [cid, filename]);
   return (
     <div className="last-exported-container">
       <p>
@@ -21,5 +21,6 @@ export default function LastExported({ fileHash }) {
 }
 
 LastExported.propTypes = {
-  fileHash: PropTypes.string.isRequired,
+  cid: PropTypes.string.isRequired,
+  filename: PropTypes.string.isRequired,
 };

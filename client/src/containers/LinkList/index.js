@@ -4,9 +4,12 @@ import "./styles.css";
 /**
  * @description Renders each individual link object.
  */
-const Link = ({ id, url, removeLink }) => {
+const Link = ({ id, title, url, removeLink }) => {
   return (
     <div className="link-container">
+      <span className="link-text">
+        {title}
+      </span>
       <a href={url} className="link-text">
         {url}
       </a>
@@ -19,7 +22,7 @@ const Link = ({ id, url, removeLink }) => {
  * @description Renders the list of links array.
  * @param {{ links: Link[], removeLink: (id: string) => void }} props
  */
-export default function LinksList({ links, removeLink }) {
+export default function LinkList({ links, removeLink }) {
   return (
     <div className="links-container">
       {links.map((link) => (

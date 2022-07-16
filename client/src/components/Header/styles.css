@@ -1,0 +1,8 @@
+.nav-ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-list-left {}
+
+.nav-list-right {}

@@ -2,25 +2,21 @@
   "name": "openlinks-client",
   "version": "0.1.0",
   "builder": true,
-  "homepage": "/app",
   "dependencies": {
     "@types/prettier": "^2.0.0",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "auth0-js": "^9.8.0",
-    "auth0-lock": "^11.10.0",
-    "ipfs-http-client": "^56.0.3",
     "prettier": "^2.0.5",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-hook-form": "^7.31.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.4",
-    "typescript": "^3.9.3"
+    "react-scripts": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
