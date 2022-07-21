@@ -29,9 +29,8 @@
 - Titles
 
 ## Current Work
-### Adding titles to links feature(UI Improvements)
-- Improved fields for the "add links" feature (UI Improvements)
-- Add node.js api for link titles (UI Improvements)
+- Add user profile photos (either with Web3.storage or nft.storage) 
+- Add 3 different themes users can choose for their exported page(Dark, Light, and Homebrew) 
 - redo splash page
 
 Important Update ASAP: Documentation with Web3.Storage instead of local integration
