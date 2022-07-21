@@ -27,6 +27,7 @@
 - Web3 Storage Integration
 - Fixed hyperlink space's problem
 - Titles
+- update out of scope fonts
 
 ## Current Work
 - Add user profile photos (either with Web3.storage or nft.storage) 
