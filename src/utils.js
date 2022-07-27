@@ -4,8 +4,21 @@
  * @param  {...string} classes
  * @returns {string}
  */
-export function clsx(...classes) {
-  return classes.filter(Boolean).join(" ");
+export function clsx(...objects) {
+  let classes = [];
+  objects.filter(Boolean).forEach((object) => {
+    if (typeof object === "object" && Object.values(object).every(Boolean)) {
+      classes.push(
+        Object.entries(object)
+          .filter(([, value]) => Boolean(value))
+          .map(([key, _]) => key)
+          .join(" ")
+      );
+    } else if (typeof object === "string") {
+      classes.push(object);
+    }
+  });
+  return classes.join(" ");
 }
 
 /**
@@ -80,4 +93,16 @@ export async function fetchHandler(response) {
  */
 export function generateIPFSFileURL(cid, filename) {
   return `https://${cid}.ipfs.dweb.link/${filename}`;
+}
+
+export function mergeRefs(...refs) {
+  return (el) => {
+    refs.forEach(ref => {
+      if (typeof ref === "function") {
+        ref(el);
+      } else {
+        ref.current = el;
+      }
+    });
+  }
 }

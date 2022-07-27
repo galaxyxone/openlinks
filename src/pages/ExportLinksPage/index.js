@@ -1,10 +1,7 @@
-import React, { useCallback, useReducer, useState } from "react";
-import { LINK_ACTIONS } from "../../actions";
+import React, { useCallback, useState } from "react";
 import Export from "../../containers/Export";
 import LastExported from "../../containers/LastExported";
 import LinkForm from "../../containers/LinkForm";
-import LinkList from "../../containers/LinkList";
-import { linksReducer } from "../../reducers";
 import { exportLinks } from "../../api";
 
 import "./styles.css";
@@ -23,21 +20,13 @@ export default function ExportLinksPage({ auth }) {
   /**
    * States
    */
-  const [links, dispatch] = useReducer(linksReducer, []); // Uses reducer pattern to manage links state array
+  const [links, setLinks] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
   /**
-   * Handlers
+   * @descriptions Resets links state for the export
    */
-  const removeLink = useCallback((id) => {
-    dispatch({ payload: { id }, type: LINK_ACTIONS.REMOVE_LINK });
-  }, []);
-
-  const addLink = useCallback((link) => {
-    dispatch({ payload: link, type: LINK_ACTIONS.ADD_LINK });
-  }, []);
-
-  const resetLinks = () => dispatch({ type: LINK_ACTIONS.RESET });
+  const resetLinks = () => setLinks([]);
 
   /**
    * @description Handle export functionality.
@@ -49,7 +38,7 @@ export default function ExportLinksPage({ auth }) {
         setLoading(true);
         const { cid, filename: exportedFileName } = await exportLinks({
           title: filename,
-          links: links.map((link) => ({ title: link.title, url: link.url })),
+          links: links,
         });
         await auth.updateMetaData({ cid, filename: exportedFileName });
         // Replace below with whatever you want to tell to the user. I think replacing this with a toaster message will look much better to the user :)
@@ -63,12 +52,20 @@ export default function ExportLinksPage({ auth }) {
     [auth]
   );
 
+  /**
+   * @param {Link[]} links
+   * @description Sets links state when submitting form.
+   */
+  const handleFormSubmit = useCallback((links) => {
+    setLinks(links);
+  }, [])
+
   return isLoading ? (
     <h3>Loading...</h3>
   ) : (
     <div className="links-page-container">
-      <LinkList links={links} removeLink={removeLink} />
-      <LinkForm addLink={addLink} />
+      {/* Temporarily disable Links Form when submit is hit */}
+      {links.length === 0 && <LinkForm onSubmit={handleFormSubmit} />}
       {links.length > 0 && <Export exportFile={handleExport} links={links} />}
       {/* Only show last exported page when user is authenticated and user's data is fetched through management API successfully */}
       {auth.isAuthenticated() &&
