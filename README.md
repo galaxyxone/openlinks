@@ -25,7 +25,7 @@
 
 ### for some reason this is not working right now- fixing ASAP
 
-[Configure your Web3.Storage account ] (https://web3.storage)
+[Configure your Web3.Storage account](https://web3.storage)
 - copy/paste your Web3.Storage API key to the .env file found in project repo(fix asap)
 - npm install
 - npm start
