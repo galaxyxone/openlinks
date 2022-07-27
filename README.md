@@ -6,11 +6,10 @@
 
 ## https://openlinks.io
 
-## This repo is a work in progress-
 ### Using Web3.Storage and IPFS, easily create personalized web-pages with user defined hyperlinks(photos, article, recipe, social post). 
 
 - Login to the app, add your links and create your own website link using IPFS. User is returned a CID and link. 
-- Login to openlinks.io again to change the website anytime(users website link is updated with a new one).
+- To change the website, login to openlinks.io again anytime(users website link is updated with a new one).
 
 
 ## User Flow
