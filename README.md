@@ -6,11 +6,10 @@
 
 ## https://openlinks.io
 
-## This repo is a work in progress-
 ### Using Web3.Storage and IPFS, easily create personalized web-pages with user defined hyperlinks(photos, article, recipe, social post). 
 
 - Login to the app, add your links and create your own website link using IPFS. User is returned a CID and link. 
-- Login to openlinks.io again to change the website anytime(users website link is updated with a new one).
+- To change the website, login to openlinks.io again anytime(users website link is updated with a new one).
 
 
 ## User Flow
@@ -24,11 +23,14 @@
 
 ## Development
 
--for some reason this is not working right now- fixing ASAP
+### for some reason this is not working right now- fixing ASAP
 
-configure your web3.storage account
-npm install
-npm start
+- to start, you will need have a web3.storage API key
+[Configure your Web3.Storage account](https://web3.storage)
+- copy/paste your Web3.Storage API key to the .env file found in project repo(fix asap)
+- npm install
+- npm start
+
 ## Recent Additions
 - Web3 Storage Integration
 - Fixed hyperlink space's problem
