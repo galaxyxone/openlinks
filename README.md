@@ -22,7 +22,13 @@
 
 <img width="734" alt="Screen Shot 2022-07-16 at 10 04 05 PM" src="https://user-images.githubusercontent.com/30084404/179382086-fca97ac9-d587-49a3-95e0-2c119e901429.png">
 
+## Development
 
+-for some reason this is not working right now- fixing ASAP
+
+configure your web3.storage account
+npm install
+npm start
 ## Recent Additions
 - Web3 Storage Integration
 - Fixed hyperlink space's problem
