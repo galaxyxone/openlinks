@@ -23,11 +23,13 @@
 
 ## Development
 
--for some reason this is not working right now- fixing ASAP
+### for some reason this is not working right now- fixing ASAP
 
-configure your web3.storage account
-npm install
-npm start
+- configure your web3.storage account
+- add your api key to the .env file found in project repo(fix asap)
+- npm install
+- npm start
+
 ## Recent Additions
 - Web3 Storage Integration
 - Fixed hyperlink space's problem
