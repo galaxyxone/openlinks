@@ -17,10 +17,10 @@ import "./styles.css";
  */
 export default function Export({ exportFile, links }) {
   const {
-    formState: { errors },
-    control,
+    formState: { errors, isValid },
+    register,
     handleSubmit,
-  } = useForm();
+  } = useForm({ mode: "onBlur" });
   /**
    * @description Handles click on Export button.
    * @param {{ filename: string }} data
@@ -28,20 +28,20 @@ export default function Export({ exportFile, links }) {
   const handleExport = ({ filename }) => {
     exportFile({ filename, links });
   };
+
   return (
     links.length > 0 && (
       <form onSubmit={handleSubmit(handleExport)}>
-        <h2>Export File</h2>
+        <h2 className="export-heading">Export File</h2>
         <div className="export-container">
           <Input
             label="Filename"
-            name="filename"
-            isRequired
-            control={control}
+            {...register("filename", { required: true })}
+            error={errors.filename}
           />
           <button
-            disabled={Object.keys(errors).length > 0}
-            className="export-btn"
+            disabled={errors.filename || !isValid}
+            className="btn-primary export-btn"
             type="submit"
           >
             Export

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import Home from "./Home";
-// import Nav from "./Nav";
 import Auth from "./Auth/Auth";
 import Callback from "./Callback";
 import ExportLinksPage from "./pages/ExportLinksPage";
 import Header from "./components/Header";
 
+import "./global.styles.css"
 class App extends Component {
   constructor(props) {
     super(props);
@@ -16,8 +16,9 @@ class App extends Component {
   }
   render() {
     return (
-      <>
+      <div className="app-container">
         <Header auth={this.state.auth} />
+        <div className="app-nav-separator" />
         <div className="body">
           <Switch>
             <Route
@@ -40,7 +41,7 @@ class App extends Component {
             <Redirect to="/" />
           </Switch>
         </div>
-      </>
+      </div>
     );
   }
 }
