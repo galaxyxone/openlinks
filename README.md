@@ -27,7 +27,7 @@
 
 - to start, you will need have a web3.storage API key
 [Configure your Web3.Storage account](https://web3.storage)
-- copy/paste your Web3.Storage API key to the .env file found in project repo(fix asap)
+- copy/paste your Web3.Storage API key to the included .env file. 
 - npm install
 - npm start
 
