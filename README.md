@@ -35,17 +35,20 @@
 - npm start
 
 ## Recent Additions
-- Web3 Storage Integration
-- Fixed hyperlink space's problem
+- Updated Splash Page (openlinks.io)
+- Stepper Function within UI(react updates)
 - Titles
-- update out of scope fonts
 
 ## Current Work
 - Add user profile photos (either with Web3.storage or nft.storage) 
 - Add 3 different themes users can choose for their exported page(Dark, Light, and Homebrew) 
-- redo splash page
+- Update description video
+- Update out of scope fonts within exported page
 
-Important Update ASAP: Documentation with Web3.Storage instead of local integration
+
+## Future/ASAP
+- IPNS integration to fix hyperlink problem
+- Documentation update/ Change local configuration in document to Web3.Storage
 
 [My example website](https://bafybeie2b4dzndtisdd455aokww3gv4fto5qxhgvpvrk32er4hdxyiufem.ipfs.dweb.link/Mylinks.html)
 
