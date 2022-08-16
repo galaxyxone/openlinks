@@ -38,12 +38,13 @@
 - Updated Splash Page (openlinks.io)
 - Stepper Function within UI(react updates)
 - Titles
-- update out of scope fonts within exported page
 
 ## Current Work
 - Add user profile photos (either with Web3.storage or nft.storage) 
 - Add 3 different themes users can choose for their exported page(Dark, Light, and Homebrew) 
 - Update description video
+- Update out of scope fonts within exported page
+
 
 ## Future/ASAP
 - IPNS integration to fix hyperlink problem
