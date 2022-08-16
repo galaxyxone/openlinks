@@ -36,9 +36,9 @@
 
 ## Recent Additions
 - Updated Splash Page (openlinks.io)
-- Web3 Storage Integration
+- Stepper Function within UI(react updates)
 - Titles
-- update out of scope fonts
+- update out of scope fonts within exported page
 
 ## Current Work
 - Add user profile photos (either with Web3.storage or nft.storage) 
