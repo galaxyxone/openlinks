@@ -43,6 +43,7 @@
 ## Current Work
 - Add user profile photos (either with Web3.storage or nft.storage) 
 - Add 3 different themes users can choose for their exported page(Dark, Light, and Homebrew) 
+- Update description video
 
 ## Future/ASAP
 - IPNS integration to fix hyperlink problem
