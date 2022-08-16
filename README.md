@@ -35,15 +35,17 @@
 - npm start
 
 ## Recent Additions
+- Updated Splash Page (openlinks.io)
 - Web3 Storage Integration
-- Fixed hyperlink space's problem
 - Titles
 - update out of scope fonts
 
 ## Current Work
 - Add user profile photos (either with Web3.storage or nft.storage) 
 - Add 3 different themes users can choose for their exported page(Dark, Light, and Homebrew) 
-- redo splash page
+
+## Future/ASAP
+- IPNS integration to fix hyperlink problem
 
 Important Update ASAP: Documentation with Web3.Storage instead of local integration
 
