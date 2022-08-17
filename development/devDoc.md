@@ -10,4 +10,4 @@
 
 ## Recent updates/notes
 
-Date: 17-8 Slowed down considerably. It took me a forever to figure out api gateway/lambda headers/response compatibility and web3.storage binary data => blob convo... Resolved moving to deploy tomorrow or the next day.
+Date: 17-8 Slowed down considerably. It took me a forever to figure out api gateway/lambda headers/response compatibility and web3.storage binary data => blob convo... Resolved moving to deploy picutures via Web3.Storage tomorrow or the next day.
