@@ -7,3 +7,7 @@
 - User interface updates
 - Homepad Update (add photo)
 - Videos on how we coded our project
+
+## Recent updates/notes
+
+Date: 17-8 Slowed down considerably. It took me a forever to figure out api gateway/lambda headers/response compatibility and web3.storage binary data => blob convo... Resolved moving to deploy tomorrow or the next day.
