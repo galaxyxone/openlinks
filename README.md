@@ -19,7 +19,7 @@
 - User is returned IPFS "Webpage" address
 - Using various IPFS Gateways, users can access webpages from anywhere
 
-<img width="731" alt="Screen Shot 2022-08-10 at 5 25 15 PM" src="https://user-images.githubusercontent.com/30084404/184031254-7c67e01c-be49-440f-b9ec-507463424a62.png">
+![Screen Shot 2022-08-17 at 7 30 06 PM](https://user-images.githubusercontent.com/30084404/185266675-2128ffb0-3354-4bdf-8940-d2b7281c5f3b.png)
 
 
 ## Development
