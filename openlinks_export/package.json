@@ -1,0 +1,11 @@
+{
+  "name": "openlinks_lambda",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Logan Lentz <loganl@galaxyx.io>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "web3.storage": "^4.3.0"
+  }
+}
