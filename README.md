@@ -3,17 +3,17 @@
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](https://ipfs.io/)
 
-
-## https://openlinks.io
+## [openlinks.io](https://openlinks.io)
 
 ### Using Web3.Storage and IPFS, easily create personalized web-pages with user defined hyperlinks(photos, article, recipe, social post). 
 
 - Login to the app, add your links and create your own website link using IPFS. User is returned a CID and link. 
 - To change the website, login to openlinks.io again anytime(users website link is updated with a new one).
 
-
 ## User Flow
-- [User signs in @ Openlinks.io](https://openlinks.io) 
+
+[User signs in @ Openlinks.io](https://openlinks.io)
+
 - User uses UI to create a personalized web-page
 - web-page page is exported to IPFS(web3.storage)
 - User is returned IPFS "Webpage" address
