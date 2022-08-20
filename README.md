@@ -29,7 +29,7 @@
 - to start, you will need have a web3.storage API key
 [Configure your Web3.Storage account](https://web3.storage)
 - You will also need to sign up and generate a API Key for Auth0. 
-[Configure your Auth0 Account for login management](https://auth0.com/signup)
+[Configure your Auth0 Account](https://auth0.com/signup)
 - copy/paste your Web3.Storage and AuthO API keys to the included .env file. 
 - npm install
 - npm start
