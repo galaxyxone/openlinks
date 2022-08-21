@@ -5,15 +5,15 @@
 
 ## [openlinks.io](https://openlinks.io)
 
-### Using Web3.Storage and IPFS, easily create personalized web-pages with user defined hyperlinks(photos, article, recipe, social post). 
+### Using Web3.Storage and IPFS, easily create personalized web-pages with user defined hyperlinks (photos, articles, social posts, and more!). 
 
-- Login to the app, add your links and create your own website link using IPFS. User is returned a CID and link. 
-- To change the website, login to openlinks.io again anytime(users website link is updated with a new one).
+- Login to the app, add your links, and create your own website link using IPFS. User is returned a CID and a link. 
+- To change the website, login to openlinks.io anytime and redo the webpage (user's website link is updated with a new one).
 
 ## User Flow
 
 - User uses UI to create a personalized web-page
-- web-page page is exported to IPFS(web3.storage)
+- Web-page page is exported to IPFS (web3.storage)
 - User is returned IPFS "Webpage" address
 - Using various IPFS Gateways, users can access webpages from anywhere
 
@@ -22,7 +22,7 @@
 
 ## Development
 
-### for some reason this is not working right now- fixing ASAP
+### for some reason this is not working right now - fixing ASAP
 
 - to start, you will need have a web3.storage API key
 [Configure your Web3.Storage account](https://web3.storage)
@@ -34,13 +34,13 @@
 
 ## Recent Additions
 - Updated Splash Page (openlinks.io)
-- Stepper Function within UI(react updates)
+- Stepper Function within UI (react updates)
 - Titles
 
 ## Current Work
 
 - Add user profile photos (either with Web3.storage or nft.storage) 
-- Add 3 different themes users can choose for their exported page(Dark, Light, and Homebrew) 
+- Add 3 different themes users can choose for their exported page (Dark, Light, and Homebrew) 
 - Update description video
 - Update out of scope fonts within exported page
 
@@ -48,6 +48,10 @@
 ## Future/ASAP
 
 - IPNS integration to fix hyperlink problem
+- Themes for changing the webpage colors
 - Documentation update/ Change local configuration in document to Web3.Storage
+- Mobile optimization
+- More UI improvements based on user feedback
+- Dark Mode
 
 
