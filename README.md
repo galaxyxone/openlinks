@@ -50,5 +50,4 @@
 - IPNS integration to fix hyperlink problem
 - Documentation update/ Change local configuration in document to Web3.Storage
 
-[My example website](https://bafybeie2b4dzndtisdd455aokww3gv4fto5qxhgvpvrk32er4hdxyiufem.ipfs.dweb.link/Mylinks.html)
 
