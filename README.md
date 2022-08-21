@@ -12,8 +12,6 @@
 
 ## User Flow
 
-[User signs in @ Openlinks.io](https://openlinks.io)
-
 - User uses UI to create a personalized web-page
 - web-page page is exported to IPFS(web3.storage)
 - User is returned IPFS "Webpage" address
