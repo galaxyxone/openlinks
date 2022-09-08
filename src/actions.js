@@ -1,0 +1,5 @@
+export const LINK_ACTIONS = {
+  ADD_LINK: "ADD_LINK",
+  REMOVE_LINK: "REMOVE_LINK",
+  RESET: "RESET",
+};
