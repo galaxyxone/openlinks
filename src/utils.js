@@ -106,3 +106,56 @@ export function mergeRefs(...refs) {
     });
   }
 }
+
+const SUPPORTED_IMAGE_MIME_TYPES = ["image/jpeg", "image/png"];
+
+/**
+ * @param {File} file 
+ * @returns {boolean}
+ * @description check if file is a supported image type
+ */
+export function isSupportedImageFile(file) {
+  return file && SUPPORTED_IMAGE_MIME_TYPES.includes(file.type);
+}
+
+export function generateImagePreviewURI(image) {
+  return URL.createObjectURL(image);
+}
+
+/**
+ * 
+ * @param {File} image
+ * @returns {string}
+ * @description Needed to send base64 encoded image to our lambda function.
+ */
+export async function convertImageToBase64(image) {
+  return new Promise((resolve, reject) => {
+    try {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        resolve(reader.result);
+      };
+      reader.onerror = err => reject(err)
+      reader.readAsDataURL(image);
+    } catch (err) {
+      console.warn(err);
+    }
+  });
+}
+
+const NON_ALPHANUMERIC_PATTERN = /\W+/g
+
+/**
+ * @param {string} username 
+ * @returns {string}
+ * @example <caption>Function usage (google account):</caption>
+ * cleanUsername('some dude (attribute)')
+ * // returns some-dude-attribute
+ * @example <caption>Function usage (other account):</caption>
+ * cleanUsername('some_dude@domain.org')
+ * // returns some-dude-domain-org
+ * @description This cleans usernames given by auth0
+ */
+export function cleanUsername(username) {
+  return username.replace(NON_ALPHANUMERIC_PATTERN, ' ').split(" ").join("-");
+}

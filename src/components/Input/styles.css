@@ -7,7 +7,6 @@
 }
 
 .input-container {
-    margin-left: var(--input-margin-left);
     margin-bottom: var(--input-margin-bottom);
 }
 

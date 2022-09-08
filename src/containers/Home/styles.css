@@ -1,0 +1,13 @@
+.home-page-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+}
+
+.home-content-actions {
+    display: flex;
+    margin-top: var(--margin-top);
+    justify-content: center;
+}
