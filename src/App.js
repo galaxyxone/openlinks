@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import { Route, Redirect, Switch } from "react-router-dom";
-import Home from "./Home";
+import { Route, Redirect, Switch, withRouter } from "react-router-dom";
+import Home from "./containers/Home";
 import Auth from "./Auth/Auth";
 import Callback from "./Callback";
 import ExportLinksPage from "./pages/ExportLinksPage";
 import Header from "./components/Header";
 
-import "./global.styles.css"
+import "./app.styles.css";
+import { Typography } from "@mui/material";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -15,35 +16,43 @@ class App extends Component {
     };
   }
   render() {
+    const isAuthenticated = this.state.auth.isAuthenticated();
     return (
       <div className="app-container">
         <Header auth={this.state.auth} />
-        <div className="app-nav-separator" />
-        <div className="body">
+        <div className="routes-container">
           <Switch>
-            <Route
-              path="/"
-              exact
-              render={(props) => <Home auth={this.state.auth} {...props} />}
-            />
             <Route
               path="/callback"
               render={(props) => <Callback auth={this.state.auth} {...props} />}
             />
-            {this.state.auth.isAuthenticated() ? (
+            {isAuthenticated ? (
               <Route
                 path="/export-links"
                 render={(props) => (
                   <ExportLinksPage auth={this.state.auth} {...props} />
                 )}
               />
-            ) : null}
-            <Redirect to="/" />
+            ) : (
+              <Route
+                path="/"
+                exact
+                render={(props) => <Home auth={this.state.auth} {...props} />}
+              />
+            )}
+            {isAuthenticated ? (
+              <Redirect to="/export-links" />
+            ) : (
+              <Redirect to="/" />
+            )}
           </Switch>
         </div>
+        <footer className="app-footer">
+            <Typography variant="caption">Openlinks.io</Typography>
+        </footer>
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

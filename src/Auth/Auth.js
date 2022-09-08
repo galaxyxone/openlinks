@@ -40,7 +40,7 @@ export default class Auth {
     });
   }
 
-  handleAuthentication = () => {
+  handleAuthentication = async () => {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
@@ -49,8 +49,10 @@ export default class Auth {
         // Inits auth0 management client on login
         this.initAuth0ManagementClient(authResult.accessToken);
         // Inits user on login
-        this.initUser();
-        this.history.push("/");
+        this.initUser()
+          .then(() => {
+            this.history.push("/");
+          });
       } else if (err) {
         this.history.push("/");
         alert(`Error: ${err.error}. Check the console for further details.`);
@@ -111,7 +113,9 @@ export default class Auth {
     return new Promise((resolve, reject) => {
       const userId = localStorage.getItem('user_id');
       if (userId != null && this.#auth0Management != null) {
-        this.#auth0Management.patchUserMetadata(userId, metaData, (err, user) => {
+        let updatedMetadata = this.user.user_metadata || {}
+        Object.assign(updatedMetadata, metaData);
+        this.#auth0Management.patchUserMetadata(userId, updatedMetadata, (err, user) => {
           if (err) {
             reject(err)
           } else {
@@ -130,19 +134,24 @@ export default class Auth {
    * @returns {Promise<auth0.Auth0UserProfile>}
    */
   async initUser() {
-    const userId = localStorage.getItem('user_id');
-    if (userId != null && this.#auth0Management != null) {
-      this.#auth0Management.getUser(userId, (err, user) => {
-        if (err) {
-          console.warn('Error getting user:', err);
-        } else {
-          console.log('user with meta_data:', user); // Remove log
-          this.user = user;
-        }
-      });
-    } else {
-      console.warn('User profile not initialised, user not logged in.');
-    }
+    return new Promise((resolve, reject) => {
+      const userId = localStorage.getItem('user_id');
+      if (userId != null && this.#auth0Management != null) {
+        this.#auth0Management.getUser(userId, (err, user) => {
+          if (err) {
+            console.warn('Error getting user:', err);
+            return reject(err);
+          } else {
+            console.log('user with meta_data:', user); // Remove log
+            this.user = user;
+            return resolve(user);
+          }
+        });
+      } else {
+        const err = 'User profile not initialised, user not logged in.';
+        reject(new Error(err));
+      }
+    });
   }
 
   //This is what you change when you take the app into production
@@ -174,4 +183,5 @@ export default class Auth {
  * @typedef MetaData
  * @property {string} fileHash
  * @property {string} filename
+ * @property {string} profilePicture
  */

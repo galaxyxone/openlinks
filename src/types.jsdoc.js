@@ -11,7 +11,14 @@
  */
 
 /**
+ * @typedef Settings
+ * @property {string} profileTitle
+ * @property {string} [profilePicture]
+ * @property {string} [theme]
+ */
+
+/**
  * @typedef ExportData
- * @property {string} filename
+ * @property {Settings} settings
  * @property {Link[]} links
  */

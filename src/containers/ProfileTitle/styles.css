@@ -12,4 +12,5 @@
 
 .export-heading {
     margin-left: var(--margin-left);
+    font-family: sans-serif;
 }

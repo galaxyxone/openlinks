@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import React, { Component } from "react";
 
 class Callback extends Component {
@@ -10,7 +11,7 @@ class Callback extends Component {
     }
   };
   render() {
-    return <h1>Loading...</h1>;
+    return <Typography sx={{ m: 1 }} fontWeight="bold" variant="h4">Loading...</Typography>;
   }
 }
 

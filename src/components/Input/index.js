@@ -22,7 +22,7 @@ const Input = React.forwardRef(
     ref
   ) => {
     const [isEdit, setIsEdit] = useState(false);
-    const [value, setValue] = useState('');
+    const [value, setValue] = useState("");
 
     const fieldRef = useRef();
 
@@ -33,7 +33,7 @@ const Input = React.forwardRef(
     const handleBlur = (ev) => {
       setIsEdit(false);
       onBlur(ev);
-    }
+    };
 
     /**
      * @param {React.SyntheticEvent<HTMLInputElement>} ev
@@ -42,19 +42,38 @@ const Input = React.forwardRef(
     const handleChange = (ev) => {
       setValue(ev.target.value);
       onChange(ev);
-    }
+    };
 
+    // Focus upon pressing edit pencil.
     const focusField = () => {
+      /**
+       * Push focus to callback queue using setTimeout 0, so by the time callstack is empty,
+       * Field is visible to due to state update and fieldRef contains the reference to our input field.
+       */
       setTimeout(() => {
         if (fieldRef.current) {
           fieldRef.current.focus();
         }
-      });
+      }, 0);
     };
 
+    // Enables editing for input field.
     const enableEditMode = () => {
       setIsEdit(true);
       focusField();
+    };
+
+    // Adds '*' to lables for required fields.
+    const getInputLabel = () => {
+      /**
+       * Show label as default if value is not set
+       * NOTE: Usually initially, when user hasn't added or when user has erased all the characters in the field.
+       */
+      let inputLabel = value || label;
+      if (isRequired && !value) {
+        inputLabel += "*";
+      }
+      return inputLabel;
     };
 
     return (
@@ -76,8 +95,7 @@ const Input = React.forwardRef(
             })}
             onClick={enableEditMode}
           >
-            {/* Show label as default if value is not set */}
-            {value || label}
+            {getInputLabel()}
             <FaPen className="input-edit-icon" />
           </p>
         )}

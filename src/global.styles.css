@@ -13,7 +13,7 @@
     --margin-top: 8px;
     --margin-left: 8px;
     --margin-right: 8px;
-    --margin-left: 8px;
+    --margin-bottom: 8px;
     --margin-horizontal: 8px;
     --margin-vertical: 8px;
     --app-fg-color: white;
@@ -25,19 +25,6 @@
 
     /* Accents */
     --accent-primary: #bc79ff;
-}
-
-.app-nav-separator {
-    width: 100%;
-    background-color: #919191;
-    height: 1px;
-    position: absolute;
-    top: 47px;
-    z-index: -1;
-}
-
-.app-container {
-    margin: 0 var(--margin-horizontal);
 }
 
 .btn-primary {

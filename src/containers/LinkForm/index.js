@@ -1,34 +1,27 @@
-import React from "react";
-import PropTypes from 'prop-types';
-import { useFieldArray, useForm } from "react-hook-form";
-
-import Input from "../../components/Input";
+// core imports
+import React, { useEffect } from "react";
+import { useFieldArray, useFormContext } from "react-hook-form";
+// ui lib
+import { FaTrash } from "react-icons/fa"
+// user components
+import Input from "@components/Input";
+// user misc
 import "../../types.jsdoc";
 import { URL_REGEX } from "../../constants";
-import { FaTrash } from "react-icons/fa"
-
+// style import
 import "./styles.css";
 
-function LinkForm({ onSubmit: onSubmitHandler }) {
+function LinkForm() {
   const {
     control,
-    handleSubmit,
     register,
-    reset,
-    formState: { errors, isValid, dirtyFields, touchedFields },
-  } = useForm({ mode: "onBlur" });
+    clearErrors,
+    setError,
+    formState: { dirtyFields, errors, touchedFields },
+  } = useFormContext();
 
   const { fields, insert, remove } = useFieldArray({ name: "links", control, shouldUnregister: true });
-
-  /**
-   * @description Handles submission behavior of the form.
-   * @param {{links: { title: string, url: string }[] }} data
-   */
-  const onSubmit = (data) => {
-    onSubmitHandler(data.links);
-    reset();
-  };
-
+ 
   /**
    * @description Adds a new field to form
    */
@@ -46,15 +39,28 @@ function LinkForm({ onSubmit: onSubmitHandler }) {
     remove(idx);
   };
 
+  useEffect(() => {
+    if (fields.length > 0) {
+      setTimeout(() => {
+        clearErrors("custom");
+      }, 0);
+    } else {
+      setTimeout(() => {
+        setError("custom", { type: 'custom' })
+      }, 0);
+    }
+  }, [fields, clearErrors, setError]);
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <div>
       <button className="btn-primary add-link-button" onClick={addField}>
-        Add Links
+        Another Link
       </button>
       {fields.map((field, idx) => (
         <div className="fields-container" key={field.id}>
           <Input
             {...register(`links.${idx}.title`, { required: true })}
+            isRequired
             error={
               dirtyFields.links &&
               dirtyFields.links[idx]?.title &&
@@ -70,6 +76,7 @@ function LinkForm({ onSubmit: onSubmitHandler }) {
               required: true,
               pattern: URL_REGEX,
             })}
+            isRequired
             error={
               dirtyFields.links &&
               dirtyFields.links[idx]?.url &&
@@ -90,21 +97,9 @@ function LinkForm({ onSubmit: onSubmitHandler }) {
           </div>
         </div>
       ))}
-      <div>
-        <button
-          className="btn-primary submit-link-button"
-          type="submit"
-          disabled={fields.length === 0 || !isValid}
-        >
-          Next
-        </button>
-      </div>
-    </form>
+    </div>
   );
 }
 
-LinkForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired
-}
 
 export default LinkForm;

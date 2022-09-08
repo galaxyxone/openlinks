@@ -1,6 +1,9 @@
+.app-header-container {
+    margin: 0 var(--margin-horizontal);
+}
+
 .nav-container {
     display: flex;
-    justify-content: space-between;
     margin-top: var(--margin-top);
 }
 
@@ -12,7 +15,11 @@
     height: 40px;
 }
 
-.nav-list-right {}
+.nav-list-right {
+    display: flex;
+    align-items: center;
+    margin: 0 var(--margin-horizontal);
+}
 
 .nav-link {
     display: block;
@@ -52,4 +59,14 @@ li.nav-item {
 .nav-auth-button {
     width: 100px;
     height: 30px;
+}
+
+.nav-separator {
+    width: 99%;
+    background-color: #919191;
+    height: 1px;
+    position: absolute;
+    left: var(--margin-horizontal);
+    top: 47px;
+    z-index: -1;
 }
