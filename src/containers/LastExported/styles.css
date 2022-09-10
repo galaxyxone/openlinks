@@ -1,0 +1,21 @@
+.last-exported-container {
+    margin: var(--margin-vertical) 0;
+    font-family: 'Roboto';
+}
+
+.last-exported-url {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.last-exported-url:visited {
+    color: var(--accent-primary);
+}
+
+.last-exported-url:hover {
+    color: #878787;
+}
+
+.last-exported-url:active {
+    color: #7a7a7a;
+}
