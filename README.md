@@ -22,23 +22,21 @@
 
 <img width="734" alt="Screen Shot 2022-07-16 at 10 04 05 PM" src="https://user-images.githubusercontent.com/30084404/179382086-fca97ac9-d587-49a3-95e0-2c119e901429.png">
 
-## Development
+## Development Configuration
+If you want to run this in development mode, you will need to host a local Docker instanance with the AWS Lamda runtime installed.
 
--for some reason this is not working right now- fixing ASAP
+## Recently Completed 
 
-configure your web3.storage account
-npm install
-npm start
-## Recent Additions
-- Web3 Storage Integration
-- Fixed hyperlink space's problem
-- Titles
-- update out of scope fonts
+- Setting up S3 bucket for theme previews with roles and permissions.
+- Implement Theme preview generation script.
+- Implement /themes/preview lambda with API Gateway integration.
 
-## Current Work
-- Add user profile photos (either with Web3.storage or nft.storage) 
-- Add 3 different themes users can choose for their exported page(Dark, Light, and Homebrew) 
-- redo splash page
+## Currently Working on 
+
+- Responsive home page
+- Switch button text based on links added
+
+
 
 Important Update ASAP: Documentation with Web3.Storage instead of local integration
 
