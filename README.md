@@ -27,15 +27,15 @@ If you want to run this in development mode, you will need to host a local Docke
 
 ## Recently Completed 
 
-- Added Profile Photos via Web3.Storage!
-- Setting up S3 bucket for theme previews with roles and permissions(review better alternatives ASAP/Currently this is working well)
-- Implement Theme preview generation script.
-- Implement /themes/preview lambda with API Gateway integration.
+- responsive homepage- mobile optimized(less borked)
+- themes backend/Added another Lambda function for themes that exports page to an S3 bucket before upload
 
 ## Currently Working on 
 
-- Responsive home page
-- Switch button text based on links added
+- Adding Themes to front-end
+- Updated schematic/verify via Yasir as well.
+
+
 
 
 
