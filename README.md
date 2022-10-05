@@ -13,7 +13,7 @@
 <img width="537" alt="Screen Shot 2022-08-24 at 1 31 17 AM" src="https://user-images.githubusercontent.com/90220293/193971796-8fe5876f-3cdb-4a31-b22e-d29740f7abc4.png">
 
 ## User Flow
-- [User signs in @ Openlinks.io](https://openlinks.io) 
+- [User signs in with an email address (SSO) at Openlinks.io](https://openlinks.io) 
 - User inputs their links, a title for each link, a profile photo, & gives the webpage a title
 - Web-page & profile photo are exported to IPFS (web3.storage)
 - User is returned an IPFS webpage address (a CID and link)
