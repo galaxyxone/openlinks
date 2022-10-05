@@ -1,9 +1,7 @@
-# Openlinks.io
+# [Openlinks.io](https://openlinks.io)
 
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](https://ipfs.io/)
-
-### https://openlinks.io
 
 ### Using Web3.Storage and IPFS, easily create personalized web-pages with user defined hyperlinks (photos, article, recipe, social post). 
 
