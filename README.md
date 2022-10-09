@@ -29,4 +29,4 @@ If you want to run this in development mode, you will need to host a local Docke
 ## Currently Working on 
 - Adding Themes & webpage preview to front-end
 - Updated schematic/verify via Yasir as well
-- IPNS links 
+- IPNS links via Web3.Name
