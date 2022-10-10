@@ -25,8 +25,10 @@ If you want to run this in development mode, you will need to host a local Docke
 ## Recently Completed 
 - responsive homepage- mobile optimized (less borked)
 - themes backend/Added another Lambda function for themes that exports page to an S3 bucket before upload
+- privacy policy
 
 ## Currently Working on 
+- Homepage Page Re-write
 - Adding Themes & webpage preview to front-end
 - Updated schematic/verify via Yasir as well
 - IPNS links via Web3.Name
