@@ -8,9 +8,9 @@
 - Login to the app and withn a few clicks create your own personalized link in bio website on IPFS
 - Change the website anytime (user's website link is updated with a new one)
 
-### [Example openlinks page](https://bafybeidqlaf4jkw7nfaqqgymuyahlwh4uyf7ewgzhigd3bet4mveynkbt4.ipfs.dweb.link/My-Openlinks.html)
+### [Live Openlinks Page Example](https://bafybeihwda3qc4ck4txip3aj2kqvnshp22c5qz3ewoxuberskcb64ckr5m.ipfs.dweb.link/Logan-L.html)
 
-<img width="537" alt="Screen Shot 2022-08-24 at 1 31 17 AM" src="https://user-images.githubusercontent.com/90220293/193971796-8fe5876f-3cdb-4a31-b22e-d29740f7abc4.png">
+<img width="459" alt="Screen Shot 2022-10-17 at 11 03 18 PM" src="https://user-images.githubusercontent.com/30084404/196333635-1d345cb5-bb93-4cf4-b7e1-4027d140bcb1.png">
 
 ## User Flow
 - [User signs in with an email address (SSO) at Openlinks.io](https://openlinks.io) 
