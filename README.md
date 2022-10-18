@@ -10,7 +10,7 @@
 
 ### [Live Openlinks Page Example](https://bafybeihwda3qc4ck4txip3aj2kqvnshp22c5qz3ewoxuberskcb64ckr5m.ipfs.dweb.link/Logan-L.html)
 
-<img width="459" alt="Screen Shot 2022-10-17 at 11 03 18 PM" src="https://user-images.githubusercontent.com/30084404/196333635-1d345cb5-bb93-4cf4-b7e1-4027d140bcb1.png">
+<img width="695" alt="Screen Shot 2022-10-17 at 11 17 50 PM" src="https://user-images.githubusercontent.com/30084404/196334418-2865c68e-fd5c-498f-a1b3-43a8f82a6115.png">
 
 ## User Flow
 - [User signs in with an email address (SSO) at Openlinks.io](https://openlinks.io) 
