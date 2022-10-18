@@ -16,5 +16,3 @@
 Stop wasting time and just use W3.Names. Coming up with your own configuration will take too much time Noryev... Focus on that later when there is time for that.... 
 
 http://web3.storage.ipns.localhost:8080/docs/how-tos/w3name/
-
-## one of the fastest, easiest to use ways to build a website on IPFS
