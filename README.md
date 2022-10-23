@@ -28,7 +28,7 @@ If you want to run this in development mode, you will need to host a local Docke
 - privacy policy
 
 ## Currently Working on 
-- Homepage Page Re-write
+- Adding homepage 
+- Seperation of domains
 - Adding Themes & webpage preview to front-end
-- Updated schematic/verify via Yasir as well
-- IPNS links via Web3.Name
+- update IPFS website name with IPNS links via Web3.Name
