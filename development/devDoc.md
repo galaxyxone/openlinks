@@ -14,7 +14,7 @@ After that then you need to set-up your routes within Auth0 to make sure the fro
 
 - Create Auth0 App to point to our react Front-End
 
-- Configure .env values to match Auth0
+- Configure .env values to match your Auth0 Account
 
 When you create your Auth0 Tenant configuration, think of the tenant like a development enviorment. It must be unique, so pick your own name- 
 
