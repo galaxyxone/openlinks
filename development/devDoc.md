@@ -8,18 +8,23 @@ npm install auth0-js@9.13.4 auth0-lock@11.25.1 express@4.17.1 express-jwt@5.3.1 
 
 After that then you need to set-up your routes within Auth0 to make sure the front-end works as intended with a dummy auth0 Login account- 
 
-Configure Auth0
+## Configure Auth0
 
 - Sign up for Auth0
 
 - Create Auth0 App to point to our react Front-End
+
 - Configure .env values to match Auth0
+
+When you create your Auth0 Tenant configuration, think of the tenant like a development enviorment. It must be unique, so pick your own name- 
+
+Then you need to create a new Auth0 App. Choose single page app and then go straight to settings. 
 
 ## Currently Working On- 
 
 - IPNS updates
 - UI updates
-
+- 
 
 
 
