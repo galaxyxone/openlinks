@@ -34,11 +34,11 @@ Notes and guidance on Auth0 configuration can be found inside a .md here: /openl
 
 ## Recently Completed 
 - responsive homepage- mobile optimized (less borked)
-- themes backend/Added another Lambda function for themes that exports page to an S3 bucket before upload
+- themes backend
 - privacy policy
 
 ## Currently Working on 
 - Adding homepage 
 - Seperation of domains
-- Adding Themes & webpage preview to front-end
+- Adding webpage preview to front-end
 - Replace exported page name/conventional CID address with IPNS links via Web3.Name
