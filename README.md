@@ -20,7 +20,7 @@
 - Using various IPFS Gateways, users can access webpages from anywhere
 
 ## Development Configuration
-If you want to run this in development mode, you will need to host a local Docker instnance with the AWS Lamda runtime installed.
+This code is a full functioning front-end. If you want to edit this yourself, you will need to create an auth0 account and follow the instructions below-
 
 ## Recently Completed 
 - responsive homepage- mobile optimized (less borked)
