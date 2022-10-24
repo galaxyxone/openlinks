@@ -25,9 +25,9 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 
 - Go to [Auth0.com](https://auth0.com) and create an account- then-
 
-- Create a new Auth0 Application, then- you will need to copy and past the Domain that's inside your Auth0 Application settings, Client ID into your .env file in the project file. Do that now-
+- Within your Auth0 config- Create a new Auth0 Application, then- you will need to copy and past the Domain that's inside your Auth0 Application settings, Client ID into your .env file in the project file. Do that now-
 
-- Then you will need to set the callback URL in the "allowed Callback URL" field-
+- Within your Auth0 Config- set the callback URL in the "allowed Callback URL" field-
 
 Notes and guidance on Auth0 configuration can be found inside a .md here: /openlinks/development/devdoc..
 
