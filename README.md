@@ -29,7 +29,7 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 
 - Then you will need to set the callback URL in the "allowed Callback URL" field-
 
-
+Notes and guidance on Auth0 configuration can be found inside a .md here: /openlinks/development/devdoc..
 
 
 ## Recently Completed 
