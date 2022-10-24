@@ -12,5 +12,22 @@
     justify-content: center;
 }
 
+.home-left-content,
+.home-right-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 24px;
+}
 
-    
+@media only screen and (max-width: 768px) {
+    .home-page-content {
+        flex-wrap: wrap;
+    }
+
+    .home-left-content,
+    .home-right-content {
+        width: 100%;
+    }
+}
