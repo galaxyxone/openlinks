@@ -22,14 +22,13 @@
 ## Development Configuration
 This code is a full functioning front-end. If you want to edit this yourself, you will need to create an auth0 account and follow the instructions below-
 
-```
-Go to [Auth0.com](https://auth0.com) and create an account- then-
 
-Create a new Auth0 Application, then- you will need to copy and past the Domain that's inside your Auth0 Application settings, Client ID into your .env file in the project file. Do that now-
+- Go to [Auth0.com](https://auth0.com) and create an account- then-
 
-Then you will need to set the callback URL in the "allowed Callback URL" field-
+- Create a new Auth0 Application, then- you will need to copy and past the Domain that's inside your Auth0 Application settings, Client ID into your .env file in the project file. Do that now-
 
-```
+- Then you will need to set the callback URL in the "allowed Callback URL" field-
+
 
 
 
