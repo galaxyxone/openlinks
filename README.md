@@ -29,9 +29,9 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 
 - Within your Auth0 Config- set the callback URL in the "allowed Callback URL" field-
 
-Notes and guidance on Auth0 configuration can be found inside a .md here: /openlinks/development/devdoc..
+### Notes and guidance on Auth0 configuration can be found inside a .md here: /openlinks/development/devdoc..
 
-- After your Auth0 configuration is setup, you can then procede to terminal and do-
+### After your Auth0 configuration is setup, you can then procede to terminal and do-
 
 - npm install
 - npm start
