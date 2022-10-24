@@ -31,6 +31,11 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 
 Notes and guidance on Auth0 configuration can be found inside a .md here: /openlinks/development/devdoc..
 
+- After your Auth0 configuration is setup, you can then procede to terminal and do-
+
+- npm install
+- npm start
+
 
 ## Recently Completed 
 - responsive homepage- mobile optimized (less borked)
