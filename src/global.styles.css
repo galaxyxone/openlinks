@@ -35,6 +35,7 @@
     cursor: pointer;
     font-weight: 500;
     font-size: small;
+    transition: background-color 100ms ease-in;
 }
 
 .btn-primary:disabled,

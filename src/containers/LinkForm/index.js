@@ -51,10 +51,12 @@ function LinkForm() {
     }
   }, [fields, clearErrors, setError]);
 
+  const addLinkBtnText = fields.length === 0 ? 'Add Link' : 'Another Link'
+
   return (
     <div>
       <button className="btn-primary add-link-button" onClick={addField}>
-        Another Link
+        {addLinkBtnText}
       </button>
       {fields.map((field, idx) => (
         <div className="fields-container" key={field.id}>

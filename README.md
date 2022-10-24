@@ -20,15 +20,25 @@
 - Using various IPFS Gateways, users can access webpages from anywhere
 
 ## Development Configuration
-If you want to run this in development mode, you will need to host a local Docker instnance with the AWS Lamda runtime installed.
+This code is a full functioning front-end. If you want to edit this yourself, you will need to create an auth0 account and follow the instructions below-
+
+
+- Go to [Auth0.com](https://auth0.com) and create an account- then-
+
+- Within your Auth0 config- Create a new Auth0 Application, then- you will need to copy and past the Domain that's inside your Auth0 Application settings, Client ID into your .env file in the project file. Do that now-
+
+- Within your Auth0 Config- set the callback URL in the "allowed Callback URL" field-
+
+Notes and guidance on Auth0 configuration can be found inside a .md here: /openlinks/development/devdoc..
+
 
 ## Recently Completed 
 - responsive homepage- mobile optimized (less borked)
-- themes backend/Added another Lambda function for themes that exports page to an S3 bucket before upload
+- themes backend
 - privacy policy
 
 ## Currently Working on 
 - Adding homepage 
 - Seperation of domains
-- Adding Themes & webpage preview to front-end
-- update IPFS website name with IPNS links via Web3.Name
+- Adding webpage preview to front-end
+- Replace exported page name/conventional CID address with IPNS links via Web3.Name
