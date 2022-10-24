@@ -41,4 +41,4 @@ Notes and guidance on Auth0 configuration can be found inside a .md here: /openl
 - Adding homepage 
 - Seperation of domains
 - Adding Themes & webpage preview to front-end
-- update IPFS website name with IPNS links via Web3.Name
+- Replace exported page name/conventional CID address with IPNS links via Web3.Name
