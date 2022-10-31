@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "builder": true,
   "dependencies": {
+    "@auth0/auth0-react": "^1.12.0",
     "@mui/material": "^5.9.3",
     "@mui/styled-engine-sc": "^5.9.3",
     "auth0-js": "^9.8.0",

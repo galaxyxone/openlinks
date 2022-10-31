@@ -63,6 +63,7 @@ export function filterNullValues(object) {
  */
 async function fetchContentTypeHandler(response) {
   switch (response.headers.get("content-type")) {
+    case "application/json; charset=utf-8": // added for auth0 users api header
     case "application/json":
       return response.json();
     case "text/html":
@@ -97,20 +98,20 @@ export function generateIPFSFileURL(cid, filename) {
 
 export function mergeRefs(...refs) {
   return (el) => {
-    refs.forEach(ref => {
+    refs.forEach((ref) => {
       if (typeof ref === "function") {
         ref(el);
       } else {
         ref.current = el;
       }
     });
-  }
+  };
 }
 
 const SUPPORTED_IMAGE_MIME_TYPES = ["image/jpeg", "image/png"];
 
 /**
- * @param {File} file 
+ * @param {File} file
  * @returns {boolean}
  * @description check if file is a supported image type
  */
@@ -123,7 +124,7 @@ export function generateImagePreviewURI(image) {
 }
 
 /**
- * 
+ *
  * @param {File} image
  * @returns {string}
  * @description Needed to send base64 encoded image to our lambda function.
@@ -135,7 +136,7 @@ export async function convertImageToBase64(image) {
       reader.onloadend = () => {
         resolve(reader.result);
       };
-      reader.onerror = err => reject(err)
+      reader.onerror = (err) => reject(err);
       reader.readAsDataURL(image);
     } catch (err) {
       console.warn(err);
@@ -143,10 +144,10 @@ export async function convertImageToBase64(image) {
   });
 }
 
-const NON_ALPHANUMERIC_PATTERN = /\W+/g
+const NON_ALPHANUMERIC_PATTERN = /\W+/g;
 
 /**
- * @param {string} username 
+ * @param {string} username
  * @returns {string}
  * @example <caption>Function usage (google account):</caption>
  * cleanUsername('some dude (attribute)')
@@ -157,5 +158,10 @@ const NON_ALPHANUMERIC_PATTERN = /\W+/g
  * @description This cleans usernames given by auth0
  */
 export function cleanUsername(username) {
-  return username.replace(NON_ALPHANUMERIC_PATTERN, ' ').split(" ").join("-");
+  return username.replace(NON_ALPHANUMERIC_PATTERN, " ").split(" ").join("-");
 }
+
+/**
+ * @description empty function, used as a placeholder
+ */
+export function noop() {}

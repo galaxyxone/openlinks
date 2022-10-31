@@ -6,7 +6,6 @@ import { FaTrash } from "react-icons/fa"
 // user components
 import Input from "@components/Input";
 // user misc
-import "../../types.jsdoc";
 import { URL_REGEX } from "../../constants";
 // style import
 import "./styles.css";

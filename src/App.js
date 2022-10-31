@@ -1,58 +1,42 @@
-import React, { Component } from "react";
-import { Route, Redirect, Switch, withRouter } from "react-router-dom";
-import Home from "./containers/Home";
-import Auth from "./Auth/Auth";
-import Callback from "./Callback";
-import ExportLinksPage from "./pages/ExportLinksPage";
-import Header from "./components/Header";
-
-import "./app.styles.css";
+// core
+import { useEffect } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+// ui lib
 import { Typography } from "@mui/material";
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      auth: new Auth(this.props.history),
-    };
-  }
-  render() {
-    const isAuthenticated = this.state.auth.isAuthenticated();
-    return (
-      <div className="app-container">
-        <Header auth={this.state.auth} />
-        <div className="routes-container">
-          <Switch>
-            <Route
-              path="/callback"
-              render={(props) => <Callback auth={this.state.auth} {...props} />}
-            />
-            {isAuthenticated ? (
-              <Route
-                path="/export-links"
-                render={(props) => (
-                  <ExportLinksPage auth={this.state.auth} {...props} />
-                )}
-              />
-            ) : (
-              <Route
-                path="/"
-                exact
-                render={(props) => <Home auth={this.state.auth} {...props} />}
-              />
-            )}
-            {isAuthenticated ? (
-              <Redirect to="/export-links" />
-            ) : (
-              <Redirect to="/" />
-            )}
-          </Switch>
-        </div>
-        <footer className="app-footer">
-            <Typography variant="caption">Openlinks.io</Typography>
-        </footer>
+// components
+import ExportLinksPage from "./pages/ExportLinksPage";
+import Auth from "./containers/Auth";
+import Header from "./components/Header";
+// styles
+import "./app.styles.css";
+import { auth0Config } from "./auth0.config";
+
+function App() {
+  const auth = useAuth0();
+
+  useEffect(() => {
+    if (!auth.isLoading && !auth.isAuthenticated) {
+      auth.loginWithRedirect({ redirectUri: auth0Config.redirectUri });
+    }
+  }, [auth]);
+
+  return (
+    <div className="app-container">
+      {auth.isAuthenticated && <Header />}
+      <div className="routes-container">
+        <Switch>
+          <Route path="/" component={Auth} exact />
+          {auth.isAuthenticated && (
+            <Route exact path="/export-links" component={ExportLinksPage} />
+          )}
+        </Switch>
       </div>
-    );
-  }
+      <footer className="app-footer">
+        <Typography variant="caption">Openlinks.io</Typography>
+      </footer>
+    </div>
+  );
 }
 
-export default withRouter(App);
+export default App;
