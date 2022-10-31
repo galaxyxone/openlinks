@@ -11,15 +11,18 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import CircularProgress from "@mui/material/CircularProgress";
 // user components
-import LastExported from "@containers/LastExported";
+import StepperLoader from "@components/StepperLoader";
 // user libs
+import { useAuth0Metadata } from "@contexts/auth0-metadata.context";
 import { StepperFormContextProvider } from "@contexts/stepper-form.context";
 // api
 import * as api from "api";
 // Styles
 import "./styles.css";
 
-function FormStepper({ auth, steps }) {
+function FormStepper({ steps }) {
+  // authentication
+  const { metadata, updateMetadata } = useAuth0Metadata();
   // Stepper form
   const formMethods = useForm({ mode: "onBlur" });
   // Form validity
@@ -43,6 +46,7 @@ function FormStepper({ auth, steps }) {
   // loading states
   const [isLoading, setLoading] = useState(false);
 
+  // TODO: Fix, profile picture title doesn't reset
   const resetForm = () => {
     setWizardStep(0);
     formMethods.reset();
@@ -52,16 +56,16 @@ function FormStepper({ auth, steps }) {
    * @description Handle export functionality on form submit
    * @type {(values: ExportData) => Promise<void>}
    */
-  const handleExport = async ({ settings, links }) => {
+  const handleExport = async ({ settings, links }) => { // settings and links are coming from the form present in each step of the stepper
     try {
       setLoading(true);
       const { cid, filename: exportedFileName } = await api.exportLinks({
         title: settings.profileTitle,
         links: links,
-        theme: settings.theme || 'default', // Themes component not yet set since we don't have themes for now, default theme corresponds to white theme on template engine.
-        profilePicture: auth.user?.user_metadata?.profilePicture
+        theme: settings.theme,
+        profilePicture: metadata?.profilePicture,
       });
-      await auth.updateMetaData({ cid, filename: exportedFileName });
+      await updateMetadata({ cid, filename: exportedFileName });
       // Replace below with whatever you want to tell to the user. I think replacing this with a toaster message will look much better to the user :)
       alert("Added file to Web3.Storage! and updated metadata\nHash: " + cid);
       resetForm();
@@ -90,7 +94,7 @@ function FormStepper({ auth, steps }) {
         >
           <Stepper orientation="vertical" activeStep={wizardStep}>
             {steps.map((step) => (
-              <Step key={step.label}>
+              <Step className="stepper-label" key={step.label}>
                 <StepLabel>{step.label}</StepLabel>
                 {/* Stop components from unmounting on step change to persist component's state */}
                 <StepContent TransitionProps={{ unmountOnExit: false }}>
@@ -129,14 +133,7 @@ function FormStepper({ auth, steps }) {
         {wizardStep === MAX_STEP && (
           <Box sx={{ mt: 1 }}>
             {isLoading ? (
-              <Box sx={{ display: "flex", alignItems: "center", mt: 1, mb: 1 }}>
-                <Typography sx={{ mr: 1 }} variant="h6">
-                  Exporting...
-                </Typography>
-                <Box>
-                  <CircularProgress sx={{ mr: 1 }} size={25} />
-                </Box>
-              </Box>
+              <StepperLoader />
             ) : (
               <React.Fragment>
                 {/* Show appropriate message if form's state is invalid */}
@@ -173,15 +170,6 @@ function FormStepper({ auth, steps }) {
           </Box>
         )}
       </form>
-      {/* Only show last exported page when user is authenticated and user's data is fetched through management API successfully */}
-      {auth.isAuthenticated() &&
-        auth.user?.user_metadata?.cid &&
-        auth.user?.user_metadata?.filename && (
-          <LastExported
-            cid={auth.user.user_metadata.cid}
-            filename={auth.user.user_metadata.filename}
-          />
-        )}
     </FormProvider>
   );
 }

@@ -1,0 +1,26 @@
+:root {
+  --theme-highlight-color: #b8b8b8;
+}
+
+.theme-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.theme-container {
+  transition: border-color 150ms ease-in, scale 200ms ease-in;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.selected-theme {
+  background-color: var(--theme-highlight-color);
+  scale: 0.9;
+}
+
+.theme-container:hover {
+  cursor: pointer;
+  border: 1px solid var(--theme-highlight-color);
+}
