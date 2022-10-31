@@ -37,13 +37,14 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 - npm start
 
 
-## Recently Completed 
-- responsive homepage- mobile optimized (less borked)
-- themes backend
-- privacy policy
+## Sprint 7(previous work)
+- New Homepage re-write
+- Domain Seperation JS Homepage/React App after login
+- Privacy Policy hosted by Web3.Storage
 
-## Currently Working on 
-- Adding homepage 
-- Seperation of domains
-- Adding webpage preview to front-end
+## Longer Paced Updates-
+- Adding webpage preview to front-end(+-50% completed)
+
+## Sprint 8(Current Work)
+- Change gateway from dweb.link to web3.storage gateway for performance
 - Replace exported page name/conventional CID address with IPNS links via Web3.Name
