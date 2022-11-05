@@ -6,7 +6,7 @@
 
   1.  Click the button that says "new applicaiton".
   2.  Choose single-page app for your configuration
-  3.  Within the application uri section, Set the Login URI to (x...........) and set the "Allowed Callback URL" too (x.........).
+  3.  Within the application uri section, Set the Login URI to (x...........) and set the "Allowed Callback URL" too http://localhost:3000/callback
 
 maybe add this all within its own document... 
 
