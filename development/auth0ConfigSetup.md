@@ -2,7 +2,7 @@
 
 - Sign up for Auth0
 
-- Create Auth0 Application to point to our React Front-End. You do that using the Auth0 Interface. 
+- Create Auth0 Application within the Auth0 Dashboard to point to our React Front-End. 
 
   1.  Click the button that says "new applicaiton".
   2.  Choose single-page app for your configuration
