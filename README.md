@@ -37,7 +37,7 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 - npm start
 
 
-## Sprint 7(previous work)
+## Sprint 7(Completed) 
 - New Homepage re-write
 - Domain Seperation JS Homepage/React App after login
 - Privacy Policy hosted by Web3.Storage
