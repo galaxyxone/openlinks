@@ -30,12 +30,6 @@ Then you need to create a new Auth0 App. Choose single page app and then go stra
 
 - IPNS updates
 - UI updates
-- 
-
-
-
-
-
 
 ## IPNS Notes
 
