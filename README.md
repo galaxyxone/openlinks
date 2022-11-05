@@ -46,6 +46,7 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 ## Sprint 8(Current Work)
 - Change gateway from dweb.link back to web3.storage gateway for performance
 - Replace exported page name/conventional CID address with IPNS links via Web3.Name
+- Finish writing Auth0 Authentication Setup instructions
 
 ## Longer Paced Updates-
 - Adding webpage preview to front-end(+-50% completed)
