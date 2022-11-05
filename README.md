@@ -50,4 +50,4 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 ## Longer Paced Updates-
 - Adding webpage preview to front-end(+-50% completed)
 
-## [New Project Milestone board](https://github.com/orgs/galaxyxone/projects/4)
+## [New Project Milestone Board](https://github.com/orgs/galaxyxone/projects/4)
