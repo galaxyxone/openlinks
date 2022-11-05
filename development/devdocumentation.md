@@ -18,6 +18,8 @@ After that then you need to set-up your routes within Auth0 to make sure the fro
   2.  Choose single-page app for your configuration
   3.  Within the application uri section, Set the Login URI to (x...........) and set the "Allowed Callback URL" too (x.........).
 
+maybe add this all within its own document... 
+
 - Configure .env values to match your Auth0 Account
 
 When you create your Auth0 Tenant configuration, think of the tenant like a development enviorment. It must be unique, so pick your own name- 
