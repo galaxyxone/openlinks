@@ -42,9 +42,10 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 - Domain Seperation JS Homepage/React App after login
 - Privacy Policy hosted by Web3.Storage
 
-## Longer Paced Updates-
-- Adding webpage preview to front-end(+-50% completed)
-
 ## Sprint 8(Current Work)
 - Change gateway from dweb.link to web3.storage gateway for performance
 - Replace exported page name/conventional CID address with IPNS links via Web3.Name
+
+## Longer Paced Updates-
+- Adding webpage preview to front-end(+-50% completed)
+
