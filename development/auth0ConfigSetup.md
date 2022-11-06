@@ -10,6 +10,17 @@
    
     - The Callback URL that Auth0 will call when its done authenticating a user. The url that is called after authentication.
 
+### env example - This is what you need to configure the enviroment variables within the project- 
+
+/* 
+REACT_APP_AUTH0_AUDIENCE=
+REACT_APP_AUTH0_DOMAIN=
+REACT_APP_AUTH0_CALLBACK=
+REACT_APP_LOGOUT_URL=
+REACT_APP_AUTH0_CLIENT_ID=
+REACT_APP_SERVER_BASE_URL=
+*/
+
 maybe add this all within its own document... 
 
 - Configure .env values to match your Auth0 Account
