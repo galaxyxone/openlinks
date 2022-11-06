@@ -7,6 +7,8 @@
   1.  Click the button that says "new applicaiton".
   2.  Choose single-page app for your configuration
   3.  Within the application uri section, Set the Login URI to (x...........) and set the "Allowed Callback URL" too http://localhost:3000/callback
+   
+    - The Callback URL that Auth0 will call when its done authenticating a user. The url that is called after authentication.
 
 maybe add this all within its own document... 
 
