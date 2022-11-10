@@ -1,4 +1,4 @@
 node_modules
 .env
 .contexts/ipfs.context.js
-.env
+

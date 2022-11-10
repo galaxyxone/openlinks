@@ -1,7 +1,8 @@
 # [Openlinks.io](https://openlinks.io)
 
-[![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
+[![MIT](https://img.shields.io/npm/l/react-tag-input.svg?style=flat-square)](https://github.com/react-tags/react-tags/blob/master/LICENSE)
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](https://ipfs.io/)
+
 
 ### Using Web3.Storage and IPFS, easily create a personalized Link in Bio webpage with user defined links.
 
@@ -29,21 +30,24 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 
 - Within your Auth0 Config- set the callback URL in the "allowed Callback URL" field-
 
-### Notes and guidance on Auth0 configuration can be found inside a .md here: /openlinks/development/devdoc..
-
+### Notes and guidance on Auth0 configuration can be found inside a .md [here](https://github.com/noryev/openlinks/blob/main/development/auth0ConfigSetup.md)
 ### After your Auth0 configuration is setup, you can then procede to terminal and do-
 
 - npm install
 - npm start
 
 
-## Recently Completed 
-- responsive homepage- mobile optimized (less borked)
-- themes backend
-- privacy policy
+## Sprint 7(Completed) 
+- New Homepage re-write
+- Domain Seperation JS Homepage/React App after login
+- Privacy Policy hosted by Web3.Storage
 
-## Currently Working on 
-- Adding homepage 
-- Seperation of domains
-- Adding webpage preview to front-end
+## Sprint 8(Current Work)
+- Change gateway from dweb.link back to web3.storage gateway for performance
 - Replace exported page name/conventional CID address with IPNS links via Web3.Name
+- Finish writing Auth0 Authentication Setup instructions
+
+## Longer Paced Updates-
+- Adding webpage preview to front-end(+-50% completed)
+
+## [New Project Milestone Board](https://github.com/orgs/galaxyxone/projects/4)

@@ -12,7 +12,13 @@ After that then you need to set-up your routes within Auth0 to make sure the fro
 
 - Sign up for Auth0
 
-- Create Auth0 App to point to our react Front-End
+- Create Auth0 Application to point to our React Front-End. You do that using the Auth0 Interface. 
+
+  1.  Click the button that says "new applicaiton".
+  2.  Choose single-page app for your configuration
+  3.  Within the application uri section, Set the Login URI to (x...........) and set the "Allowed Callback URL" too (x.........).
+
+maybe add this all within its own document... 
 
 - Configure .env values to match your Auth0 Account
 
@@ -24,12 +30,6 @@ Then you need to create a new Auth0 App. Choose single page app and then go stra
 
 - IPNS updates
 - UI updates
-- 
-
-
-
-
-
 
 ## IPNS Notes
 
