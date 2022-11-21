@@ -42,12 +42,20 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 - Domain Seperation JS Homepage/React App after login
 - Privacy Policy hosted by Web3.Storage
 
-## Sprint 8(Current Work)
-- Change gateway from dweb.link back to web3.storage gateway for performance
-- Replace exported page name/conventional CID address with IPNS links via Web3.Name
+## Sprint 8(Completed) 
+- Add required sdk modules to our lambda layer config
+- Add s3 service to our openlinks_utility Lambda layer
+- Added the new /themes/config lambda configuration with S3 integration API Gateway
+
+## Sprint 9(Current Work)
+- Update /export lambda function with S3 themes config
+- Update themes preview generator script with S3 themes config
 - Finish writing Auth0 Authentication Setup instructions
+- Web3.name integration documentation
 
 ## Longer Paced Updates-
-- Adding webpage preview to front-end(+-50% completed)
+- Adding webpage preview to front-end(+-75% completed)
+- Change IPFS Gateway configuration from dweb.link back to Leto Gateway
+- Replace exported page name/conventional CID address with IPNS links via Web3.Name
 
 ## [New Project Milestone Board](https://github.com/orgs/galaxyxone/projects/4)
