@@ -4,17 +4,8 @@ import Input from "@components/Input";
 
 import "./styles.css";
 
-/**
- *
- * @typedef ProfileTitleProps
- * @property {(data: ExportData) => Promise<void>} exportFile
- * @property {string[]} links
- */
+const FORM_FIELD_NAME = "settings.profileTitle";
 
-/**
- * @param {ProfileTitleProps} props
- * @returns {JSX.Element}
- */
 function ProfileTitle() {
   const {
     register,
@@ -27,9 +18,10 @@ function ProfileTitle() {
         <Input
           label="Profile Title"
           isRequired
-          {...register("settings.profileTitle", { required: true })}
+          {...register(FORM_FIELD_NAME, { required: true })}
           error={
-            touchedFields.settings?.profileTitle && dirtyFields.settings?.profileTitle
+            touchedFields.settings?.profileTitle &&
+            dirtyFields.settings?.profileTitle
               ? errors.settings?.profileTitle
               : null
           }
