@@ -165,3 +165,5 @@ export function cleanUsername(username) {
  * @description empty function, used as a placeholder
  */
 export function noop() {}
+
+//Let's get this adventure started, lads!
