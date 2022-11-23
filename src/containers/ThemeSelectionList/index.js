@@ -1,26 +1,15 @@
 import { Box } from "@mui/material";
-import { useEffect, useState } from "react";
-// api
-import { getThemePreviews } from "@api";
 // user lib
 import ThemeSelector from "@components/ThemeSelector";
 import { Controller, useFormContext } from "react-hook-form";
+import { useThemePreviews } from "@contexts/theme-previews.context";
 
 const DEFAULT_THEME = "light";
 const FORM_FIELD_NAME = "settings.theme";
 
 function ThemeSelectionList() {
-  const [previews, setPreviews] = useState([]); // Theme previews -> From API
-
   const { control } = useFormContext();
-
-  // get theme previews from API
-  useEffect(() => {
-    getThemePreviews().then((data) => {
-      setPreviews(data?.previews);
-      console.log(data);
-    });
-  }, []);
+  const previews = useThemePreviews();
 
   // render Theme list
   return (
