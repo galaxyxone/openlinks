@@ -1,6 +1,6 @@
 // core
 import { useEffect } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 // ui lib
 import { Typography } from "@mui/material";

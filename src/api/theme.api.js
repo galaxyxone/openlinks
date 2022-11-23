@@ -12,3 +12,12 @@ import { fetchHandler } from "@utils";
     },
   }).then(fetchHandler);
 }
+
+export function getThemeConfig() {
+  return fetch(`${process.env.REACT_APP_SERVER_BASE_URL}/themes/config`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then(fetchHandler)
+}

@@ -1,6 +1,6 @@
 // Core
 import React, { useCallback, useMemo, useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 // UI Libs
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
@@ -24,7 +24,7 @@ function FormStepper({ steps }) {
   // authentication
   const { metadata, updateMetadata } = useAuth0Metadata();
   // Stepper form
-  const formMethods = useForm({ mode: "onBlur" });
+  const formMethods = useFormContext()
   // Form validity
   const isFormValid = useMemo(
     () => formMethods.formState.isValid,
@@ -56,9 +56,17 @@ function FormStepper({ steps }) {
    * @description Handle export functionality on form submit
    * @type {(values: ExportData) => Promise<void>}
    */
-  const handleExport = async ({ settings, links }) => { // settings and links are coming from the form present in each step of the stepper
+  const handleExport = async ({ settings, links }) => {
+    // settings and links are coming from the form present in each step of the stepper
     try {
       setLoading(true);
+      console.log(settings, links)
+      await new Promise((_, reject) => {
+        setTimeout(() => {
+          reject('failed successfully')
+          resetForm();
+        }, 3000);
+      })
       const { cid, filename: exportedFileName } = await api.exportLinks({
         title: settings.profileTitle,
         links: links,
@@ -84,93 +92,87 @@ function FormStepper({ steps }) {
   }
 
   return (
-    <FormProvider {...formMethods}>
-      <form onSubmit={formMethods.handleSubmit(handleExport)}>
-        <StepperFormContextProvider
-          value={{
-            isLoading,
-            setLoading,
-          }}
-        >
-          <Stepper orientation="vertical" activeStep={wizardStep}>
-            {steps.map((step) => (
-              <Step className="stepper-label" key={step.label}>
-                <StepLabel>{step.label}</StepLabel>
-                {/* Stop components from unmounting on step change to persist component's state */}
-                <StepContent TransitionProps={{ unmountOnExit: false }}>
-                  {step.content}
-                  <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                    <Button
-                      disabled={
-                        isLoading ||
-                        formErrors[step.formKey] != null ||
-                        formErrors["custom"] != null
-                      }
-                      variant="contained"
-                      onClick={handleNext}
-                      sx={{ mt: 1, mr: 1 }}
-                    >
-                      Next
-                    </Button>
-                    <Button
-                      disabled={isLoading || wizardStep === 0}
-                      onClick={handlePrevious}
-                      sx={{ mt: 1, mr: 1 }}
-                    >
-                      Back
-                    </Button>
-                    {isLoading && (
-                      <div>
-                        <CircularProgress size={20} sx={{ mt: 1, mr: 1 }} />
-                      </div>
-                    )}
-                  </Box>
-                </StepContent>
-              </Step>
-            ))}
-          </Stepper>
-        </StepperFormContextProvider>
-        {wizardStep === MAX_STEP && (
-          <Box sx={{ mt: 1 }}>
-            {isLoading ? (
-              <StepperLoader />
-            ) : (
-              <React.Fragment>
-                {/* Show appropriate message if form's state is invalid */}
-                {isFormValid ? (
-                  <Typography>
-                    Are you sure you want to generate bio links with that
-                    information?
-                  </Typography>
-                ) : (
-                  <Typography>
-                    Please complete the steps above to proceed
-                  </Typography>
-                )}
-                {/* Actions available upon steps completion */}
-                <Box>
+    <form onSubmit={formMethods.handleSubmit(handleExport)}>
+      <StepperFormContextProvider
+        value={{
+          isLoading,
+          setLoading,
+        }}
+      >
+        <Stepper orientation="vertical" activeStep={wizardStep}>
+          {steps.map((step) => (
+            <Step className="stepper-label" key={step.label}>
+              <StepLabel>{step.label}</StepLabel>
+              {/* Stop components from unmounting on step change to persist component's state */}
+              <StepContent TransitionProps={{ unmountOnExit: false }}>
+                {step.content}
+                <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
                   <Button
-                    sx={{ mt: 1, mr: 1 }}
+                    disabled={
+                      isLoading ||
+                      formErrors[step.formKey] != null ||
+                      formErrors["custom"] != null
+                    }
                     variant="contained"
-                    type="submit"
-                    disabled={!isFormValid}
+                    onClick={handleNext}
+                    sx={{ mt: 1, mr: 1 }}
                   >
-                    Export Page
+                    Next
                   </Button>
                   <Button
+                    disabled={isLoading || wizardStep === 0}
                     onClick={handlePrevious}
-                    sx={{ mt: 1 }}
-                    variant="text"
+                    sx={{ mt: 1, mr: 1 }}
                   >
-                    Go Back
+                    Back
                   </Button>
+                  {isLoading && (
+                    <div>
+                      <CircularProgress size={20} sx={{ mt: 1, mr: 1 }} />
+                    </div>
+                  )}
                 </Box>
-              </React.Fragment>
-            )}
-          </Box>
-        )}
-      </form>
-    </FormProvider>
+              </StepContent>
+            </Step>
+          ))}
+        </Stepper>
+      </StepperFormContextProvider>
+      {wizardStep === MAX_STEP && (
+        <Box sx={{ mt: 1 }}>
+          {isLoading ? (
+            <StepperLoader />
+          ) : (
+            <React.Fragment>
+              {/* Show appropriate message if form's state is invalid */}
+              {isFormValid ? (
+                <Typography>
+                  Are you sure you want to generate bio links with that
+                  information?
+                </Typography>
+              ) : (
+                <Typography>
+                  Please complete the steps above to proceed
+                </Typography>
+              )}
+              {/* Actions available upon steps completion */}
+              <Box>
+                <Button
+                  sx={{ mt: 1, mr: 1 }}
+                  variant="contained"
+                  type="submit"
+                  disabled={!isFormValid}
+                >
+                  Export Page
+                </Button>
+                <Button onClick={handlePrevious} sx={{ mt: 1 }} variant="text">
+                  Go Back
+                </Button>
+              </Box>
+            </React.Fragment>
+          )}
+        </Box>
+      )}
+    </form>
   );
 }
 

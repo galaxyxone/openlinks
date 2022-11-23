@@ -17,12 +17,12 @@ const Input = React.forwardRef(
       errorMsgs,
       onChange,
       onBlur,
+      value,
       ...fieldProps
     },
     ref
   ) => {
     const [isEdit, setIsEdit] = useState(false);
-    const [value, setValue] = useState("");
 
     const fieldRef = useRef();
 
@@ -40,7 +40,6 @@ const Input = React.forwardRef(
      * @description Change event handler to maintain internal value state as well as support external change events.
      */
     const handleChange = (ev) => {
-      setValue(ev.target.value);
       onChange(ev);
     };
 
@@ -91,7 +90,7 @@ const Input = React.forwardRef(
         ) : (
           <p
             className={clsx("input-label", {
-              "input-placeholder-label": value === "", // Enable input-placeholder-label class if value is not set
+              "input-placeholder-label": value == null || value === "", // Enable input-placeholder-label class if value is not set
             })}
             onClick={enableEditMode}
           >
