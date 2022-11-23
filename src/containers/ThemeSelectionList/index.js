@@ -39,18 +39,15 @@ function ThemeSelectionList() {
 
   // render Theme list
   return (
-    <Box>
-      {/* <Typography variant="h6">Select Theme:</Typography> */}
-      <Box display="flex" flexDirection="row" flexWrap="wrap">
-        {previews.map((preview) => (
-          <ThemeSelector
-            key={preview.name}
-            {...preview}
-            onSelect={handleThemeSelection}
-            selected={selectedTheme === preview?.name}
-          />
-        ))}
-      </Box>
+    <Box display="flex" flexDirection="row" flexWrap="wrap">
+      {previews.map((preview) => (
+        <ThemeSelector
+          key={preview.name}
+          {...preview}
+          onSelect={handleThemeSelection}
+          selected={selectedTheme === preview?.name}
+        />
+      ))}
     </Box>
   );
 }
