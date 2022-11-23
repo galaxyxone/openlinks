@@ -1,9 +1,9 @@
 import { Box } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // api
 import { getThemePreviews } from "@api";
 // user lib
-import Theme from "@components/Theme";
+import ThemeSelector from "@components/ThemeSelector";
 import { useFormContext } from "react-hook-form";
 
 const DEFAULT_THEME = "light";
@@ -19,9 +19,9 @@ function ThemeSelectionList() {
   // add 'theme' field in our settings form
   useEffect(() => {
     register(formFieldName, {
-      value: "light",
+      value: selectedTheme,
     });
-  }, [register]);
+  }, [register, selectedTheme]);
 
   // handle theme selection
   const handleThemeSelection = (themeName) => {
@@ -43,7 +43,7 @@ function ThemeSelectionList() {
       {/* <Typography variant="h6">Select Theme:</Typography> */}
       <Box display="flex" flexDirection="row" flexWrap="wrap">
         {previews.map((preview) => (
-          <Theme
+          <ThemeSelector
             key={preview.name}
             {...preview}
             onSelect={handleThemeSelection}
