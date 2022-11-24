@@ -1,21 +1,29 @@
+// node modules
+import { FormProvider, useForm } from "react-hook-form";
 // user lib
-import { useAuth0Metadata } from "../../contexts/auth0-metadata.context";
+import { useAuth0Metadata } from "@contexts/auth0-metadata.context";
 import ThemePreviewsContextProvider from "@contexts/theme-previews.context";
 // components
 import FormStepper from "@containers/FormStepper";
 import LinkForm from "@containers/LinkForm";
 import LastExported from "@containers/LastExported";
 import SettingsForm from "@containers/SettingsForm";
+import LivePreview from "@containers/LivePreview";
+
 import {
   LinksPageContainer,
   PageLeftContent,
   PageRightContent,
 } from "./styles";
-import { FormProvider, useForm } from "react-hook-form";
+
+const DEFAULT_FORM_VALUES = {
+  settings: {},
+  links: []
+}
 
 function ExportLinksPage() {
   const { metadata } = useAuth0Metadata();
-  const formMethods = useForm({ mode: "onBlur" });
+  const formMethods = useForm({ mode: "onBlur", defaultValues: DEFAULT_FORM_VALUES });
   return (
     <ThemePreviewsContextProvider>
       <FormProvider {...formMethods}>
@@ -40,7 +48,9 @@ function ExportLinksPage() {
               <LastExported cid={metadata.cid} filename={metadata.filename} />
             )}
           </PageLeftContent>
-          <PageRightContent></PageRightContent>
+          <PageRightContent>
+            <LivePreview />
+          </PageRightContent>
         </LinksPageContainer>
       </FormProvider>
     </ThemePreviewsContextProvider>
