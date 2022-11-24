@@ -13,36 +13,38 @@ import {
 } from "./styles";
 import { FormProvider, useForm } from "react-hook-form";
 
-export default function ExportLinksPage() {
+function ExportLinksPage() {
   const { metadata } = useAuth0Metadata();
   const formMethods = useForm({ mode: "onBlur" });
   return (
     <ThemePreviewsContextProvider>
       <FormProvider {...formMethods}>
-          <LinksPageContainer>
-            <PageLeftContent>
-              <FormStepper
-                steps={[
-                  {
-                    label: "Fill in Links",
-                    content: <LinkForm />,
-                    formKey: "links",
-                  },
-                  {
-                    label: "Setup your page",
-                    content: <SettingsForm />,
-                    formKey: "settings",
-                  },
-                ]}
-              />
-              {/* Only show last exported page when user is authenticated and user's data is fetched through management API successfully */}
-              {metadata?.cid && metadata?.filename && (
-                <LastExported cid={metadata.cid} filename={metadata.filename} />
-              )}
-            </PageLeftContent>
-            <PageRightContent></PageRightContent>
-          </LinksPageContainer>
+        <LinksPageContainer>
+          <PageLeftContent>
+            <FormStepper
+              steps={[
+                {
+                  label: "Fill in Links",
+                  content: <LinkForm />,
+                  formKey: "links",
+                },
+                {
+                  label: "Setup your page",
+                  content: <SettingsForm />,
+                  formKey: "settings",
+                },
+              ]}
+            />
+            {/* Only show last exported page when user is authenticated and user's data is fetched through management API successfully */}
+            {metadata?.cid && metadata?.filename && (
+              <LastExported cid={metadata.cid} filename={metadata.filename} />
+            )}
+          </PageLeftContent>
+          <PageRightContent></PageRightContent>
+        </LinksPageContainer>
       </FormProvider>
     </ThemePreviewsContextProvider>
   );
 }
+
+export default ExportLinksPage;
