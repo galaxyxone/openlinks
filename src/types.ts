@@ -20,3 +20,15 @@ export type ExportData = {
   settings: Settings;
   links: Array<Link>;
 };
+
+export type ThemeStyleSheet = any;
+
+export type ThemeButtonStyleSheet = ThemeStyleSheet & {};
+
+export type ThemeConfig = {
+  name: string;
+  defaults: ThemeStyleSheet;
+  container: ThemeStyleSheet;
+  title: ThemeStyleSheet;
+  buttons: ThemeStyleSheet;
+};
