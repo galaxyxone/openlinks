@@ -37,17 +37,17 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 - npm start
 
 
-## Sprint 7(Completed) 
+## Sprint 7 (Completed) 
 - New Homepage re-write
 - Domain Seperation JS Homepage/React App after login
 - Privacy Policy hosted by Web3.Storage
 
-## Sprint 8(Completed) 
+## Sprint 8 (Completed) 
 - Add required sdk modules to our lambda layer config
 - Add s3 service to our openlinks_utility Lambda layer
 - Added the new /themes/config lambda configuration with S3 integration API Gateway
 
-## Sprint 9(Completed)
+## Sprint 9 (Completed)
 - Update /export lambda function with S3 themes config
 - Update themes preview generator script with S3 themes config
 - Finish writing Auth0 Authentication Setup instructions
