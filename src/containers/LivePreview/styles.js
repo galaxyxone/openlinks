@@ -27,17 +27,22 @@ export const DeviceFrame = styled.div`
 
 export const PreviewLinkButton = styled.a`
   align-items: center;
+  background-color: ${({ theme }) => theme?.buttons?.bgColor ?? "inherit"};
   border-radius: 5px;
   color: ${({ theme }) => theme?.buttons?.textColor ?? "inherit"};
-  display: flex;
+  display: block;
   font-size: 1rem;
   font-weight: 500;
   justify-content: center;
   margin: 8px 16px;
   min-height: 50px;
+  overflow: hidden;
+  padding: 16px;
   text-decoration: none;
+  text-overflow: ellipsis;
+  text-align: center;
+  white-space: nowrap;
   width: 250px;
-  background-color: ${({ theme }) => theme?.buttons?.bgColor ?? "inherit"};
   &:hover {
     cursor: pointer;
     background-color: ${({ theme }) =>
@@ -61,7 +66,7 @@ export const PreviewLinksContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: scroll; 
+  overflow-y: scroll;
 `;
 
 export const PreviewScreen = styled.section`
