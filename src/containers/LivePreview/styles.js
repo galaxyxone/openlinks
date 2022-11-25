@@ -11,7 +11,6 @@ export const DeviceFrame = styled.div`
   top: 20%;
   transform-origin: top left;
   scale: 0.75;
-  /* transform: translateY(-50%) translate(-50%) translateZ(0); */
   width: 352px;
   &::after {
     background-image: url(${frame});
