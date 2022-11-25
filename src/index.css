@@ -17,13 +17,6 @@ body {
   /* background-color: rgb(67, 67, 67); */
 }
 
-h1,
-h2,
-h3,
-h6 {
-  color: var(--text-primary-color);
-}
-
 ul.unstyled {
   list-style-type: none;
   margin: 0;
