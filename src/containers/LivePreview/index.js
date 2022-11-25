@@ -14,7 +14,7 @@ function LivePreview() {
   const themeConfig = useThemeConfig(theme);
 
   if (themeConfig == null) {
-    return <Typography margin={2}>Loading...</Typography>;
+    return <Typography margin={2}>Loading Preview...</Typography>;
   }
 
   return (
