@@ -1,11 +1,10 @@
 // node modules
-import { useMemo } from "react";
+import { Typography } from "@mui/material";
 // user lib
 import useFormValues from "@hooks/useFormValues";
+import useThemeConfig from "@hooks/useThemeConfig";
 // styles
 import { DeviceFrame } from "./styles";
-import { useThemePreviews } from "@contexts/theme-previews.context";
-import useThemeConfig from "@hooks/useThemeConfig";
 
 function LivePreview() {
   const {
@@ -15,7 +14,7 @@ function LivePreview() {
   const themeConfig = useThemeConfig(theme);
 
   if (themeConfig == null) {
-    return <p>Loading...</p>;
+    return <Typography margin={2}>Loading...</Typography>;
   }
 
   return (
