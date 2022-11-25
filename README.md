@@ -10,9 +10,9 @@
 - In a few clicks, create your own personalized link in bio website on IPFS
 - Change the website anytime (user's website link is updated with a new one)
 
-### [Live Openlinks Page Example](https://bafybeihwda3qc4ck4txip3aj2kqvnshp22c5qz3ewoxuberskcb64ckr5m.ipfs.dweb.link/Logan-L.html)
+### [Live Openlinks Page Example](https://bafybeigudn33kfiho647u5ad6hsw7r7p6ddzsplbvphalv34fyso3yuup4.ipfs.dweb.link/My-Openlinks.html)
 
-<img width="695" alt="Screen Shot 2022-10-17 at 11 17 50 PM" src="https://user-images.githubusercontent.com/30084404/196334418-2865c68e-fd5c-498f-a1b3-43a8f82a6115.png">
+<img width="849" alt="Screenshot 2022-11-25 at 3 56 41 PM" src="https://user-images.githubusercontent.com/30084404/204060651-1b094ca7-857f-42fb-93f9-68844ea7251d.png">
 
 ## User Flow
 - [User signs in with an email address (SSO) at Openlinks.io](https://openlinks.io) 
