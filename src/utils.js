@@ -167,3 +167,12 @@ export function cleanUsername(username) {
 export function noop() {}
 
 //Let's get this adventure started, lads!
+
+/**
+ * @description Primarily used for extracting file name for last exported component.
+ * @param {string} uri 
+ * @returns {string}
+ */
+export function getFileNameFromIPFSResourceURI(uri) {
+  return uri.split('/').at(-1)
+}
