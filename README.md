@@ -52,13 +52,22 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 - Added the new /themes/config lambda configuration with S3 integration API Gateway
 
 ## Sprint 9 (Completed)
+- Add required sdk modules to our lambda layer config
+- Add s3 service to our openlinks_utility Lambda layer
+- Added the new /themes/config lambda configuration with S3 integration API Gateway
 - Update /export lambda function with S3 themes config
 - Update themes preview generator script with S3 themes config
+
+## Sprint 9(Current Work)
+- Website re-work
 - Finish writing Auth0 Authentication Setup instructions
 - Web3.name integration documentation
 
 ## Development Roadmap-
 - Change IPFS Gateway configuration from dweb.link back to Leto Gateway
+
+## Longer Paced Updates-
+- Change IPFS Gateway configuration from dweb.link back to nft.storage
 - Replace exported page name/conventional CID address with IPNS links via Web3.Name
 - Linktree conversion feature - connect an Openlinks account to a Linktree via user login to display Linktree links instantly - [heres](https://github.com/benkaiser/linktree-scraper) a Linktree Scraper from a couple years ago
 - Custom webpage themes - choose from any color or upload a photo
