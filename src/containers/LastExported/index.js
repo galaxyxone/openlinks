@@ -1,7 +1,7 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import PropTypes from "prop-types";
 
-import { generateIPFSFileURL } from "../../utils";
+import { generateIPFSFileURL, getFileNameFromIPFSResourceURI } from "../../utils";
 import './styles.css';
 /**
  * @description Renders last exported URL message for the user.
@@ -13,7 +13,7 @@ export default function LastExported({ cid, filename }) {
       <p>
         You can find your last exported page at:{" "}
         <a className="last-exported-url" target="_blank" rel="noopener noreferrer" href={ipfsUrl}>
-          {ipfsUrl}
+          {getFileNameFromIPFSResourceURI(ipfsUrl)}
         </a>
       </p>
     </div>
