@@ -55,14 +55,6 @@ export const PreviewLinksAvatar = styled.img`
   border: 2px solid ${({ theme }) => theme?.buttons?.bgColor ?? "inherit"};
   height: 128px;
   width: 128px;
-  &:hover {
-    background-color: ${({ theme }) =>
-      theme?.buttons?.bgColorHover ?? "inherit"};
-  }
-  &:active {
-    background-color: ${({ theme }) =>
-      theme?.buttons?.bgColorActive ?? "inherit"};
-  }
 `;
 
 export const PreviewLinksContainer = styled.div`
