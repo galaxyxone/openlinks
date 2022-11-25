@@ -60,13 +60,6 @@ function FormStepper({ steps }) {
     // settings and links are coming from the form present in each step of the stepper
     try {
       setLoading(true);
-      console.log(settings, links)
-      await new Promise((_, reject) => {
-        setTimeout(() => {
-          reject('failed successfully')
-          resetForm();
-        }, 3000);
-      })
       const { cid, filename: exportedFileName } = await api.exportLinks({
         title: settings.profileTitle,
         links: links,
