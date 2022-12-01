@@ -1,8 +1,8 @@
 // core imports
 import React, { useEffect } from "react";
-import { useFieldArray, useFormContext } from "react-hook-form";
+import { Controller, useFieldArray, useFormContext } from "react-hook-form";
 // ui lib
-import { FaTrash } from "react-icons/fa"
+import { FaTrash } from "react-icons/fa";
 // user components
 import Input from "@components/Input";
 // user misc
@@ -11,16 +11,14 @@ import { URL_REGEX } from "../../constants";
 import "./styles.css";
 
 function LinkForm() {
-  const {
-    control,
-    register,
-    clearErrors,
-    setError,
-    formState: { dirtyFields, errors, touchedFields },
-  } = useFormContext();
+  const { control, clearErrors, setError } = useFormContext();
 
-  const { fields, insert, remove } = useFieldArray({ name: "links", control, shouldUnregister: true });
- 
+  const { fields, insert, remove } = useFieldArray({
+    name: "links",
+    control,
+    shouldUnregister: true,
+  });
+
   /**
    * @description Adds a new field to form
    */
@@ -45,12 +43,12 @@ function LinkForm() {
       }, 0);
     } else {
       setTimeout(() => {
-        setError("custom", { type: 'custom' })
+        setError("custom", { type: "custom" });
       }, 0);
     }
   }, [fields, clearErrors, setError]);
 
-  const addLinkBtnText = fields.length === 0 ? 'Add Link' : 'Another Link'
+  const addLinkBtnText = fields.length === 0 ? "Add Link" : "Another Link";
 
   return (
     <div>
@@ -59,40 +57,51 @@ function LinkForm() {
       </button>
       {fields.map((field, idx) => (
         <div className="fields-container" key={field.id}>
-          <Input
-            {...register(`links.${idx}.title`, { required: true })}
-            isRequired
-            error={
-              dirtyFields.links &&
-              dirtyFields.links[idx]?.title &&
-              touchedFields.links &&
-              touchedFields.links[idx]?.title
-                ? errors?.links && errors.links[idx]?.title
-                : null
-            }
-            label="Title"
+          <Controller
+            control={control}
+            name={`links.${idx}.title`}
+            rules={{ required: true }}
+            render={({ field, fieldState }) => (
+              <Input
+                {...field}
+                isRequired
+                error={
+                  fieldState.isTouched && fieldState.isDirty
+                    ? fieldState.error
+                    : null
+                }
+                label="Title"
+              />
+            )}
           />
-          <Input
-            {...register(`links.${idx}.url`, {
+          <Controller
+            control={control}
+            name={`links.${idx}.url`}
+            rules={{
               required: true,
               pattern: URL_REGEX,
-            })}
-            isRequired
-            error={
-              dirtyFields.links &&
-              dirtyFields.links[idx]?.url &&
-              touchedFields.links &&
-              touchedFields.links[idx]?.url
-                ? errors?.links && errors.links[idx]?.url
-                : null
-            }
-            errorMsgs={{
-              pattern: "URL needs to be in format http://example.com",
-            }} // Error messages by type
-            label="Url"
+            }}
+            render={({ field, fieldState }) => (
+              <Input
+                isRequired
+                {...field}
+                error={
+                  fieldState.isTouched && fieldState.isDirty
+                    ? fieldState.error
+                    : null
+                }
+                errorMsgs={{
+                  pattern: "URL needs to be in format http://example.com",
+                }} // Error messages by type
+                label="Url"
+              />
+            )}
           />
           <div className="fields-footer">
-            <button className="icon-btn delete-link-button" onClick={removeField(idx)}>
+            <button
+              className="icon-btn delete-link-button"
+              onClick={removeField(idx)}
+            >
               <FaTrash />
             </button>
           </div>
@@ -101,6 +110,5 @@ function LinkForm() {
     </div>
   );
 }
-
 
 export default LinkForm;

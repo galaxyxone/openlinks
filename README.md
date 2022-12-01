@@ -6,12 +6,13 @@
 
 ### Using Web3.Storage and IPFS, easily create a personalized Link in Bio webpage with user defined links.
 
-- Login to the app and withn a few clicks create your own personalized link in bio website on IPFS
+- Login to the app on desktop or mobile 
+- In a few clicks, create your own personalized link in bio website on IPFS
 - Change the website anytime (user's website link is updated with a new one)
 
-### [Live Openlinks Page Example](https://bafybeihwda3qc4ck4txip3aj2kqvnshp22c5qz3ewoxuberskcb64ckr5m.ipfs.dweb.link/Logan-L.html)
+### [Live Openlinks Page Example](https://bafybeigudn33kfiho647u5ad6hsw7r7p6ddzsplbvphalv34fyso3yuup4.ipfs.dweb.link/My-Openlinks.html)
 
-<img width="695" alt="Screen Shot 2022-10-17 at 11 17 50 PM" src="https://user-images.githubusercontent.com/30084404/196334418-2865c68e-fd5c-498f-a1b3-43a8f82a6115.png">
+<img width="849" alt="Screenshot 2022-11-25 at 3 56 41 PM" src="https://user-images.githubusercontent.com/30084404/204060651-1b094ca7-857f-42fb-93f9-68844ea7251d.png">
 
 ## User Flow
 - [User signs in with an email address (SSO) at Openlinks.io](https://openlinks.io) 
@@ -19,6 +20,9 @@
 - Web-page & profile photo are exported to IPFS (web3.storage)
 - User is returned an IPFS webpage address (a CID and link)
 - Using various IPFS Gateways, users can access webpages from anywhere
+
+
+<img width="1460" alt="Screenshot 2022-11-25 at 4 08 54 PM" src="https://user-images.githubusercontent.com/90220293/204059259-a9b94c16-1526-4fae-ba0d-0ea9a6214d85.png">
 
 ## Development Configuration
 This code is a full functioning front-end. If you want to edit this yourself, you will need to create an auth0 account and follow the instructions below-
@@ -37,25 +41,38 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 - npm start
 
 
-## Sprint 7(Completed) 
+## Sprint 7 (Completed) 
 - New Homepage re-write
 - Domain Seperation JS Homepage/React App after login
 - Privacy Policy hosted by Web3.Storage
 
-## Sprint 8(Completed) 
+## Sprint 8 (Completed) 
 - Add required sdk modules to our lambda layer config
 - Add s3 service to our openlinks_utility Lambda layer
 - Added the new /themes/config lambda configuration with S3 integration API Gateway
 
-## Sprint 9(Current Work)
+## Sprint 9 (Completed)
+- Add required sdk modules to our lambda layer config
+- Add s3 service to our openlinks_utility Lambda layer
+- Added the new /themes/config lambda configuration with S3 integration API Gateway
 - Update /export lambda function with S3 themes config
 - Update themes preview generator script with S3 themes config
+
+## Sprint 9(Current Work)
+- Website re-work
 - Finish writing Auth0 Authentication Setup instructions
 - Web3.name integration documentation
 
-## Longer Paced Updates-
-- Adding webpage preview to front-end(+-75% completed)
+## Development Roadmap-
 - Change IPFS Gateway configuration from dweb.link back to Leto Gateway
+
+## Longer Paced Updates-
+- Change IPFS Gateway configuration from dweb.link back to nft.storage
 - Replace exported page name/conventional CID address with IPNS links via Web3.Name
+- Linktree conversion feature - connect an Openlinks account to a Linktree via user login to display Linktree links instantly - [heres](https://github.com/benkaiser/linktree-scraper) a Linktree Scraper from a couple years ago
+- Custom webpage themes - choose from any color or upload a photo
+- Custom webpage fonts - choose from a list of different fonts
+- Login & create an Openlinks page with a Metamask/Lens account (add these login options to our Auth0 login screen)
+- Disply NFT profile photo
 
 ## [New Project Milestone Board](https://github.com/orgs/galaxyxone/projects/4)

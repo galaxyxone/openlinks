@@ -20,10 +20,12 @@
     "noEmit": true,
     "paths": {
       "api": ["api"],
+      "@assets/*": ["assets/*"],
       "@api/*": ["api/*"],
       "@contexts/*": ["contexts/*"],
       "@containers/*": ["containers/*"],
       "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
       "@utils/*": ["utils/*"]
     },

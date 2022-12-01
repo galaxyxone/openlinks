@@ -1,4 +1,3 @@
-import React from "react";
 import * as PropTypes from "prop-types";
 // ui lib
 import { Box, capitalize, Typography } from "@mui/material";
@@ -7,7 +6,7 @@ import { clsx, noop } from "@utils";
 // style imports
 import "./styles.css";
 
-function Theme({ name, url, onSelect = noop, selected = false }) {
+function ThemeSelector({ name, url, onSelect = noop, selected = false }) {
   const imageAlt = `${name} theme preview`;
 
   // Handle click on single Theme container
@@ -32,11 +31,11 @@ function Theme({ name, url, onSelect = noop, selected = false }) {
   );
 }
 
-Theme.propTypes = {
+ThemeSelector.propTypes = {
   name: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   onSelect: PropTypes.func,
   selected: PropTypes.bool,
 };
 
-export default Theme;
+export default ThemeSelector;

@@ -1,38 +1,33 @@
-import React from "react";
-import { useFormContext } from "react-hook-form";
+import { Controller, useFormContext } from "react-hook-form";
 import Input from "@components/Input";
 
 import "./styles.css";
 
-/**
- *
- * @typedef ProfileTitleProps
- * @property {(data: ExportData) => Promise<void>} exportFile
- * @property {string[]} links
- */
+const FORM_FIELD_NAME = "settings.profileTitle";
 
-/**
- * @param {ProfileTitleProps} props
- * @returns {JSX.Element}
- */
 function ProfileTitle() {
-  const {
-    register,
-    formState: { errors, dirtyFields, touchedFields },
-  } = useFormContext();
+  const { control } = useFormContext();
 
   return (
     <div>
       <div className="export-container">
-        <Input
-          label="Profile Title"
-          isRequired
-          {...register("settings.profileTitle", { required: true })}
-          error={
-            touchedFields.settings?.profileTitle && dirtyFields.settings?.profileTitle
-              ? errors.settings?.profileTitle
-              : null
-          }
+        <Controller
+          name={FORM_FIELD_NAME}
+          control={control}
+          defaultValue=''
+          rules={{ required: true }}
+          render={({ field, fieldState }) => (
+            <Input
+              label="Profile Title"
+              isRequired
+              {...field}
+              error={
+                fieldState.isTouched && fieldState.isDirty
+                  ? fieldState.error
+                  : null
+              }
+            />
+          )}
         />
       </div>
     </div>
