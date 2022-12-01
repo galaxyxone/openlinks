@@ -35,4 +35,4 @@ Then you need to create a new Auth0 App. Choose single page app and then go stra
 
 Stop wasting time and just use W3.Names. Coming up with your own configuration will take too much time Noryev... Focus on that later when there is time for that.... 
 
-http://web3.storage.ipns.localhost:8080/docs/how-tos/w3name/
+link to repo with all the w3.name help from the amazing JChris [here](https://github.com/jchris/w3ui-ipfs-camera/commit/5b463790df9a87b4246bcbf3ee0c35fe0642fe30)
