@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](https://ipfs.io/)
 
 
-### Using Web3.Storage and IPFS, easily create a personalized Link in Bio webpage with user defined links.
+### Using Web3.Storage and IPFS, easily create a personalized Link in Bio webpage with user defined links. [Openlinks Case Study by Web3.Storage<3](https://blog.web3.storage/posts/openlinks-case-study)
 
 - Login to the app on desktop or mobile 
 - In a few clicks, create your own personalized link in bio website on IPFS
