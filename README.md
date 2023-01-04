@@ -13,7 +13,7 @@
 
 ### [Live Openlinks Page Example](https://bafybeigudn33kfiho647u5ad6hsw7r7p6ddzsplbvphalv34fyso3yuup4.ipfs.dweb.link/My-Openlinks.html)
 
-<img width="849" alt="Screenshot 2022-11-25 at 3 56 41 PM" src="https://user-images.githubusercontent.com/30084404/204060651-1b094ca7-857f-42fb-93f9-68844ea7251d.png">
+<img width="180" alt="Screenshot 2022-11-25 at 3 56 41 PM" src="https://user-images.githubusercontent.com/30084404/204060651-1b094ca7-857f-42fb-93f9-68844ea7251d.png">
 
 ## User Flow
 - [User signs in with an email address (SSO) at Openlinks.io](https://openlinks.io) 
