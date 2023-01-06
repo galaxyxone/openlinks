@@ -76,7 +76,7 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 ## Longer Paced Updates-
 
 - Replace exported page name/conventional CID address with IPNS links via Web3.Name
-- Linktree conversion feature - connect an Openlinks account to a Linktree via user login to display Linktree links instantly - [heres](https://github.com/benkaiser/linktree-scraper) a Linktree Scraper from a couple years ago
+- Linktree conversion feature - connect an Openlinks account to a Linktree via user login to display Linktree links instantly - [link](https://github.com/benkaiser/linktree-scraper) a Linktree Scraper from a couple years ago
 - Custom webpage themes - choose from any color or upload a photo
 - Custom webpage fonts - choose from a list of different fonts
 - Login & create an Openlinks page with a Metamask/Lens account (add these login options to our Auth0 login screen)
