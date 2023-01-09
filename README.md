@@ -11,9 +11,9 @@
 - In a few clicks, create your own personalized link in bio website on IPFS
 - Change the website anytime (user's website link is updated with a new one)
 
-### [Live Openlinks Page Example](https://bafybeigudn33kfiho647u5ad6hsw7r7p6ddzsplbvphalv34fyso3yuup4.ipfs.dweb.link/My-Openlinks.html)
+<img width="250" alt="Screenshot 2022-11-25 at 3 56 41 PM" src="https://user-images.githubusercontent.com/30084404/204060651-1b094ca7-857f-42fb-93f9-68844ea7251d.png">
 
-<img width="849" alt="Screenshot 2022-11-25 at 3 56 41 PM" src="https://user-images.githubusercontent.com/30084404/204060651-1b094ca7-857f-42fb-93f9-68844ea7251d.png">
+### [Live Openlinks Page Example](https://bafybeigudn33kfiho647u5ad6hsw7r7p6ddzsplbvphalv34fyso3yuup4.ipfs.dweb.link/My-Openlinks.html)
 
 ## User Flow
 - [User signs in with an email address (SSO) at Openlinks.io](https://openlinks.io) 
@@ -76,7 +76,7 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 ## Longer Paced Updates-
 
 - Replace exported page name/conventional CID address with IPNS links via Web3.Name
-- Linktree conversion feature - connect an Openlinks account to a Linktree via user login to display Linktree links instantly - [heres](https://github.com/benkaiser/linktree-scraper) a Linktree Scraper from a couple years ago
+- Linktree conversion feature - connect an Openlinks account to a Linktree via user login to display Linktree links instantly - [link](https://github.com/benkaiser/linktree-scraper) a Linktree Scraper from a couple years ago
 - Custom webpage themes - choose from any color or upload a photo
 - Custom webpage fonts - choose from a list of different fonts
 - Login & create an Openlinks page with a Metamask/Lens account (add these login options to our Auth0 login screen)
