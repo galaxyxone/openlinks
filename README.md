@@ -18,7 +18,7 @@
 ## User Flow
 [User signs in with an email address (SSO) at Openlinks.io](https://openlinks.io) 
 - Input links and a title for each link
-- Add a profile photo, give the webpage a title, and choose a background theme
+- Add a profile photo, choose a background theme, and give the webpage a title
 - Web-page & profile photo are exported to IPFS (web3.storage)
 - User is returned an IPFS webpage address (a CID and link)
 - Using various IPFS Gateways, users can access webpages from anywhere
