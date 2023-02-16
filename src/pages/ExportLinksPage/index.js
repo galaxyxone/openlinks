@@ -6,7 +6,7 @@ import ThemePreviewsContextProvider from "@contexts/theme-previews.context";
 // components
 import FormStepper from "@containers/FormStepper";
 import LinkForm from "@containers/LinkForm";
-import LastExported from "@containers/LastExported";
+import BioLinkViewer from "@containers/BioLinkViewer";
 import SettingsForm from "@containers/SettingsForm";
 import LivePreview from "@containers/LivePreview";
 
@@ -53,7 +53,7 @@ function ExportLinksPage() {
             />
             {/* Only show last exported page when user is authenticated and user's data is fetched through management API successfully */}
             {metadata?.cid && (
-              <LastExported urlId={userId} />
+              <BioLinkViewer urlId={userId} />
             )}
           </PageLeftContent>
           <PageRightContent>

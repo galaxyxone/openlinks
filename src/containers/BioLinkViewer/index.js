@@ -6,7 +6,7 @@ import "./styles.css";
 /**
  * @description Renders last exported URL message for the user.
  */
-export default function LastExported({ urlId }) {
+export default function BioLinkViewer({ urlId }) {
 
   if (!urlId) return null;
 
@@ -27,6 +27,6 @@ export default function LastExported({ urlId }) {
   );
 }
 
-LastExported.propTypes = {
+BioLinkViewer.propTypes = {
   urlId: PropTypes.string.isRequired,
 };
