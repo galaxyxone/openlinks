@@ -19,10 +19,14 @@ import { StepperFormContextProvider } from "@contexts/stepper-form.context";
 import * as api from "api";
 // Styles
 import "./styles.css";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function FormStepper({ steps }) {
   // authentication
   const { metadata, updateMetadata } = useAuth0Metadata();
+  const {
+    user
+  } = useAuth0()
   // Stepper form
   const formMethods = useFormContext()
   // Form validity
@@ -64,6 +68,7 @@ function FormStepper({ steps }) {
         title: settings.profileTitle,
         links: links,
         theme: settings.theme,
+        userId: user?.sub,
         profilePicture: metadata?.profilePicture,
       });
       await updateMetadata({ cid, filename: exportedFileName });
