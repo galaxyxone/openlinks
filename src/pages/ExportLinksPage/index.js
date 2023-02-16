@@ -15,15 +15,23 @@ import {
   PageLeftContent,
   PageRightContent,
 } from "./styles";
+import { useMemo } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+import { extractIdFromAuth0User } from "utils";
 
 const DEFAULT_FORM_VALUES = {
   settings: {},
-  links: []
-}
+  links: [],
+};
 
 function ExportLinksPage() {
   const { metadata } = useAuth0Metadata();
-  const formMethods = useForm({ mode: "onBlur", defaultValues: DEFAULT_FORM_VALUES });
+  const { user } = useAuth0();
+  const formMethods = useForm({
+    mode: "onBlur",
+    defaultValues: DEFAULT_FORM_VALUES,
+  });
+  const userId = useMemo(() => extractIdFromAuth0User(user), [user]);
   return (
     <ThemePreviewsContextProvider>
       <FormProvider {...formMethods}>
@@ -44,8 +52,8 @@ function ExportLinksPage() {
               ]}
             />
             {/* Only show last exported page when user is authenticated and user's data is fetched through management API successfully */}
-            {metadata?.cid && metadata?.filename && (
-              <LastExported cid={metadata.cid} filename={metadata.filename} />
+            {metadata?.cid && (
+              <LastExported urlId={userId} />
             )}
           </PageLeftContent>
           <PageRightContent>
