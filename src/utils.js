@@ -96,6 +96,25 @@ export function generateIPFSFileURL(cid, filename) {
   return `https://${cid}.ipfs.dweb.link/${filename}`;
 }
 
+/**
+ * 
+ * @param {string} urlId 
+ * @description Returns Fully Qualified Domain Name (FQDN) for bio url. To be used for href.
+ */
+export function buildBioUrl(urlId) {
+  return `https://bio.openlinks.io/${urlId}`
+}
+
+const URL_PROTOCOL_PATTERN = /(http|https):\/\//g
+
+export function getBioUrlName(urlId) {
+  return buildBioUrl(urlId).replace(URL_PROTOCOL_PATTERN, '')
+}
+
+export function extractIdFromAuth0User(user) {
+  return user?.sub?.split('|').pop()
+}
+
 export function mergeRefs(...refs) {
   return (el) => {
     refs.forEach((ref) => {
