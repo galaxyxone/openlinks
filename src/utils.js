@@ -180,7 +180,7 @@ export function cleanUsername(username) {
 }
 
 /**
- * @description empty function, used as a placeholder
+ * @description empty function, used as a default function value or placeholder
  */
 export function noop() {}
 
