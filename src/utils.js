@@ -88,18 +88,11 @@ export async function fetchHandler(response) {
 }
 
 /**
- * @param {string} cid
- * @param {string} filename
- * @returns {string}
- */
-export function generateIPFSFileURL(cid, filename) {
-  return `https://${cid}.ipfs.dweb.link/${filename}`;
-}
-
-/**
  * 
  * @param {string} urlId 
  * @description Returns Fully Qualified Domain Name (FQDN) for bio url. To be used for href.
+ * @example
+ * getBioUrlName(123) // https://bio.openlinks.io/123
  */
 export function buildBioUrl(urlId) {
   return `https://bio.openlinks.io/${urlId}`
@@ -107,6 +100,12 @@ export function buildBioUrl(urlId) {
 
 const URL_PROTOCOL_PATTERN = /(http|https):\/\//g
 
+/**
+ * @param {string} urlId 
+ * @description Returns domain name and path for viewing purposes.
+ * @example
+ * getBioUrlName(123) // bio.openlinks.io/123
+ */
 export function getBioUrlName(urlId) {
   return buildBioUrl(urlId).replace(URL_PROTOCOL_PATTERN, '')
 }
@@ -186,12 +185,3 @@ export function cleanUsername(username) {
 export function noop() {}
 
 //Let's get this adventure started, lads!
-
-/**
- * @description Primarily used for extracting file name for last exported component.
- * @param {string} uri 
- * @returns {string}
- */
-export function getFileNameFromIPFSResourceURI(uri) {
-  return uri.split('/').at(-1)
-}
