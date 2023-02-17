@@ -88,12 +88,30 @@ export async function fetchHandler(response) {
 }
 
 /**
- * @param {string} cid
- * @param {string} filename
- * @returns {string}
+ * 
+ * @param {string} urlId 
+ * @description Returns Fully Qualified Domain Name (FQDN) for bio url. To be used for href.
+ * @example
+ * getBioUrlName(123) // https://bio.openlinks.io/123
  */
-export function generateIPFSFileURL(cid, filename) {
-  return `https://${cid}.ipfs.dweb.link/${filename}`;
+export function buildBioUrl(urlId) {
+  return `https://bio.openlinks.io/${urlId}`
+}
+
+const URL_PROTOCOL_PATTERN = /(http|https):\/\//g
+
+/**
+ * @param {string} urlId 
+ * @description Returns domain name and path for viewing purposes.
+ * @example
+ * getBioUrlName(123) // bio.openlinks.io/123
+ */
+export function getBioUrlName(urlId) {
+  return buildBioUrl(urlId).replace(URL_PROTOCOL_PATTERN, '')
+}
+
+export function extractIdFromAuth0User(user) {
+  return user?.sub?.split('|').pop()
 }
 
 export function mergeRefs(...refs) {
@@ -162,17 +180,8 @@ export function cleanUsername(username) {
 }
 
 /**
- * @description empty function, used as a placeholder
+ * @description empty function, used as a default function value or placeholder
  */
 export function noop() {}
 
 //Let's get this adventure started, lads!
-
-/**
- * @description Primarily used for extracting file name for last exported component.
- * @param {string} uri 
- * @returns {string}
- */
-export function getFileNameFromIPFSResourceURI(uri) {
-  return uri.split('/').at(-1)
-}
