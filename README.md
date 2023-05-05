@@ -41,11 +41,10 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 - npm install
 - npm start
 
-## Sprint 11 (Current Work)
-- IPNS Integration(@Yasir TYSM!)
-- Auth0 Development Setup Instructions
-- Homepage Updates(Finalize changes)
-- Change IPFS Gateway configuration from dweb.link back to nft.storage
+## Sprint 12 (Current Work)
+- Review Documentation 
+- Website Updates
+- Infrastructure Upkeeping
 
 ## [Current Project Milestone Board](https://github.com/orgs/galaxyxone/projects/4)
 
