@@ -45,6 +45,6 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 - Website Updates
 - Infrastructure Upkeeping
 
-## [Current Project Milestone Board](https://github.com/orgs/galaxyxone/projects/4)
+### [Current Project Milestone Board](https://github.com/orgs/galaxyxone/projects/4)
 
 ### [Case Study by Web3.Storage<3](https://blog.web3.storage/posts/openlinks-case-study)
