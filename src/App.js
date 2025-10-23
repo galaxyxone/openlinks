@@ -8,6 +8,7 @@ import { Typography } from "@mui/material";
 import ExportLinksPage from "./pages/ExportLinksPage";
 import Auth from "./containers/Auth";
 import Header from "./components/Header";
+import Callback from "./Callback";
 // styles
 import "./app.styles.css";
 import { auth0Config } from "./auth0.config";
@@ -26,6 +27,7 @@ function App() {
       {auth.isAuthenticated && <Header />}
       <div className="routes-container">
         <Switch>
+          <Route path="/callback" component={Callback} />
           <Route path="/" component={Auth} exact />
           {auth.isAuthenticated && (
             <Route exact path="/export-links" component={ExportLinksPage} />
