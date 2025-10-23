@@ -35,6 +35,9 @@ This code is a full functioning front-end. If you want to edit this yourself, yo
 - Within your Auth0 Config- set the callback URL in the "allowed Callback URL" field-
 
 ### Notes and guidance on Auth0 configuration can be found inside a .md [here](https://github.com/noryev/openlinks/blob/main/development/auth0ConfigSetup.md)
+
+- When you have your Auth0 Account setup, then you can modify the sample.env file within the root of the project and save it as `.env`-. 
+
 ### After your Auth0 configuration is setup, you can then procede to terminal and do-
 
 - npm install
