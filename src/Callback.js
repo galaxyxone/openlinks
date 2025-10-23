@@ -9,11 +9,9 @@ const Callback = ({ history }) => {
   useEffect(() => {
     if (!isLoading) {
       if (isAuthenticated) {
-        // Redirect to the main app after successful authentication
         history.push("/");
       } else if (error) {
         console.error("Authentication error:", error);
-        // Redirect back to login
         history.push("/");
       }
     }
